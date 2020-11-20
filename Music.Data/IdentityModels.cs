@@ -5,7 +5,6 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.AspNet.Identity.Owin;
 
 namespace Music.Data
 {
@@ -32,8 +31,10 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
-        public DbSet<Song> Song { get; set; }
 
+        public DbSet<Album> Album { get; set; }
+
+        public DbSet<Song> Song { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
