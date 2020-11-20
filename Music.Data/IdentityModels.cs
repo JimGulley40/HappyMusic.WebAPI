@@ -31,7 +31,7 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
-
+        public DbSet<Album> Album { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
