@@ -31,7 +31,10 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
+
         public DbSet<Album> Album { get; set; }
+
+        public DbSet<Song> Song { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -57,4 +60,6 @@ namespace Music.Data
             HasKey(iur => iur.UserId);
         }
     }
+
+
 }
