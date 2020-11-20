@@ -1,4 +1,7 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration;
+using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -29,6 +32,7 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
+        public DbSet<PlayList>playLists { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
