@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using HappyMusic.WebAPI.Providers;
 using HappyMusic.WebAPI.Models;
+using Music.Data;
 
 namespace HappyMusic.WebAPI
 {
