@@ -306,6 +306,20 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Music.Data\Music.Data.csproj">
+      <Project>{f38b2d82-5c9c-4b54-9123-2a329f94db0d}</Project>
+      <Name>Music.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Music.Models\Music.Models.csproj">
+      <Project>{befed536-50a8-4499-9130-d9cb7e7aa01d}</Project>
+      <Name>Music.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Music.Services\Music.Services.csproj">
+      <Project>{9b0ebb46-e807-45d6-93f6-e2bae7023c79}</Project>
+      <Name>Music.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
