@@ -35,7 +35,7 @@ namespace Music.Data
 
         public DbSet<Album> Album { get; set; }
 
-        public DbSet<Song> Song { get; set; }
+        public DbSet<Song> Songs { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

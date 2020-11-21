@@ -30,5 +30,12 @@ namespace Music.Data
         [Required]
         public TimeSpan SongLength { get; set; }
 
+        [Required]
+        public Guid OwnerId { get; set; }
+
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
+
     }
 }
