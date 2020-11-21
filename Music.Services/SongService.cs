@@ -3,8 +3,6 @@ using Music.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Music.Services
 {
@@ -71,7 +69,7 @@ namespace Music.Services
                     {
                         SongId = entity.SongId,
                         Title = entity.Title,
-                       
+
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
