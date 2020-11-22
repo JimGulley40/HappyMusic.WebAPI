@@ -11,6 +11,7 @@ namespace Music.Data.Migrations
         {
             AutomaticMigrationsEnabled = false;
             ContextKey = "Music.Data.ApplicationDbContext";
+
         }
 
         protected override void Seed(Music.Data.ApplicationDbContext context)

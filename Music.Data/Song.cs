@@ -31,5 +31,9 @@ namespace Music.Data
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 
+        [ForeignKey(nameof(Playlist))]
+        public int PlaylistId { get; set; }
+        public virtual Playlist Playlist { get; set; }
+
     }
 }

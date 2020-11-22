@@ -85,6 +85,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Album.cs" />
+    <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011221736171_fixedP.cs" />
+    <Compile Include="Migrations\202011221736171_fixedP.Designer.cs">
+      <DependentUpon>202011221736171_fixedP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlaylistSong.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Playlist.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202011212337263_InitialCreate.cs" />
@@ -121,6 +130,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011221736171_fixedP.resx">
+      <DependentUpon>202011221736171_fixedP.cs</DependentUpon>
     <EmbeddedResource Include="Migrations\202011212337263_InitialCreate.resx">
       <DependentUpon>202011212337263_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
