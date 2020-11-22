@@ -58,6 +58,10 @@
     <Compile Include="Albumfolder\AlbumDetail.cs" />
     <Compile Include="Albumfolder\AlbumEdit.cs" />
     <Compile Include="Albumfolder\AlbumListItem.cs" />
+    <Compile Include="ArtistFolder\ArtistCreate.cs" />
+    <Compile Include="ArtistFolder\ArtistDetail.cs" />
+    <Compile Include="ArtistFolder\ArtistEdit.cs" />
+    <Compile Include="ArtistFolder\ArtistListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongFolder\SongCreate.cs" />
     <Compile Include="SongFolder\SongDetail.cs" />

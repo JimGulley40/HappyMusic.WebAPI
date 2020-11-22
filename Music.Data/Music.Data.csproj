@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Album.cs" />
+    <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202011212337263_InitialCreate.cs" />
     <Compile Include="Migrations\202011212337263_InitialCreate.Designer.cs">
@@ -97,6 +98,10 @@
     <Compile Include="Migrations\202011221358169_updatingAlbumToRunPostman.cs" />
     <Compile Include="Migrations\202011221358169_updatingAlbumToRunPostman.Designer.cs">
       <DependentUpon>202011221358169_updatingAlbumToRunPostman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221511147_updatingArtistCrudMethods.cs" />
+    <Compile Include="Migrations\202011221511147_updatingArtistCrudMethods.Designer.cs">
+      <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011221358169_updatingAlbumToRunPostman.resx">
       <DependentUpon>202011221358169_updatingAlbumToRunPostman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221511147_updatingArtistCrudMethods.resx">
+      <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
