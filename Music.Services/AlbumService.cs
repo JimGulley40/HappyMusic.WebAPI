@@ -10,18 +10,18 @@ namespace Music.Services
 
     public class AlbumService
     {
-        private readonly Guid _userId;
+        //private readonly Guid _userId;
 
-        public AlbumService(Guid userId)
-        {
-            _userId = userId;
-        }
+        //public AlbumService(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreateAlbum(AlbumCreate model)
         {
             var entity =
                 new Album()
                 {
-                    OwnerId = _userId,
+                    //OwnerId = _userId,
                     Title = model.Title,
                     Genre = model.Genre,
                     ReleaseDate = model.ReleaseDate,
@@ -42,7 +42,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .Albums
-                        .Where(e => e.OwnerId == _userId)
+                        //.Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new AlbumListItem
@@ -63,12 +63,12 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Albums
-                        .Single(e => e.AlbumId == id && e.OwnerId == _userId);
+                        .Single(e => e.AlbumId == id /*&& e.OwnerId == _userId*/);
                 return
                     new AlbumDetail
                     {
                         AlbumId = entity.AlbumId,
-                        OwnerId = _userId,
+                        //OwnerId = _userId,
                         Title = entity.Title,
                         Genre = entity.Genre,
                         ReleaseDate = entity.ReleaseDate,
@@ -86,7 +86,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Albums
-                        .Single(e => e.AlbumId == model.AlbumId && e.OwnerId == _userId);
+                        .Single(e => e.AlbumId == model.AlbumId/* && e.OwnerId == _userId*/);
                 //entity.AlbumId = model.AlbumId;
                 entity.Title = model.Title;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
@@ -103,7 +103,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Albums
-                        .Single(e => e.AlbumId == songId && e.OwnerId == _userId);
+                        .Single(e => e.AlbumId == songId /*&& e.OwnerId == _userId*/);
 
                 ctx.Albums.Remove(entity);
 

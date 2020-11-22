@@ -10,18 +10,13 @@ namespace Music.Services
 
     public class SongService
     {
-        private readonly Guid _userId;
-
-        public SongService(Guid userId)
-        {
-            _userId = userId;
-        }
+                
         public bool CreateSong(SongCreate model)
         {
             var entity =
                 new Song()
                 {
-                    OwnerId = _userId,
+                   
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
@@ -42,7 +37,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .Songs
-                        .Where(e => e.OwnerId == _userId)
+                        
                         .Select(
                             e =>
                                 new SongListItem
@@ -63,7 +58,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == id && e.OwnerId == _userId);
+                        .Single(e => e.SongId == id);
                 return
                     new SongDetail
                     {
@@ -84,7 +79,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == model.SongId && e.OwnerId == _userId);
+                        .Single(e => e.SongId == model.SongId);
 
                 entity.Title = model.Title;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
@@ -99,7 +94,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == songId && e.OwnerId == _userId);
+                        .Single(e => e.SongId == songId);
 
                 ctx.Songs.Remove(entity);
 
