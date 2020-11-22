@@ -10,18 +10,18 @@ namespace Music.Services
 
     public class ArtistService
     {
-        private readonly Guid _userId;
+        //private readonly Guid _userId;
 
-        public ArtistService(Guid userId)
-        {
-            _userId = userId;
-        }
+        //public ArtistService(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreateArtist(ArtistCreate model)
         {
             var entity =
                 new Artist()
                 {
-                    OwnerId = _userId,
+                    //OwnerId = _userId,
                     ArtistName = model.ArtistName,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -39,7 +39,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .Artists
-                        .Where(e => e.OwnerId == _userId)
+                        /*.Where(e => e.OwnerId == _userId)*/
                         .Select(
                             e =>
                                 new ArtistListItem
@@ -60,12 +60,12 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Artists
-                        .Single(e => e.ArtistId == id && e.OwnerId == _userId);
+                        .Single(e => e.ArtistId == id/* && e.OwnerId == _userId*/);
                 return
                     new ArtistDetail
                     {
                         ArtistId = entity.ArtistId,
-                        OwnerId = _userId,
+                        //OwnerId = _userId,
                         ArtistName = entity.ArtistName,
                         CreatedUtc = DateTimeOffset.Now,
                         ModifiedUtc = entity.ModifiedUtc
@@ -80,7 +80,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Artists
-                        .Single(e => e.ArtistId == model.ArtistId && e.OwnerId == _userId);
+                        .Single(e => e.ArtistId == model.ArtistId /*&& e.OwnerId == _userId)*/);
                 //entity.ArtistId = model.ArtistId;
                 entity.ArtistName = model.ArtistName;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
@@ -97,7 +97,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Artists
-                        .Single(e => e.ArtistId == songId && e.OwnerId == _userId);
+                        .Single(e => e.ArtistId == songId /*&& e.OwnerId == _userId*/);
 
                 ctx.Artists.Remove(entity);
 

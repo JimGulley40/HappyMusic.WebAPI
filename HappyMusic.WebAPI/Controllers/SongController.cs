@@ -21,8 +21,8 @@ namespace HappyMusic.WebAPI.Controllers
 
         private SongService CreateSongService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var songService = new SongService(userId);
+            
+            var songService = new SongService();
             return songService;
         }
         public IHttpActionResult Post(SongCreate song)

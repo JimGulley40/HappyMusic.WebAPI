@@ -21,8 +21,8 @@ namespace HappyMusic.WebAPI.Controllers
 
         private AlbumService CreateAlbumService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var albumService = new AlbumService(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            var albumService = new AlbumService(/*userId*/);
             return albumService;
         }
         public IHttpActionResult Post(AlbumCreate album)
