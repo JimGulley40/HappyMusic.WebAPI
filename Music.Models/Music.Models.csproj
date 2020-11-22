@@ -54,15 +54,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Albumfolder\AlbumCreate.cs" />
+    <Compile Include="Albumfolder\AlbumDetail.cs" />
+    <Compile Include="Albumfolder\AlbumEdit.cs" />
+    <Compile Include="Albumfolder\AlbumListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SongCreate.cs" />
-    <Compile Include="SongDetail.cs" />
-    <Compile Include="SongEdit.cs" />
-    <Compile Include="SongListItem.cs" />
+    <Compile Include="SongFolder\SongCreate.cs" />
+    <Compile Include="SongFolder\SongDetail.cs" />
+    <Compile Include="SongFolder\SongEdit.cs" />
+    <Compile Include="SongFolder\SongListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Music.Data\Music.Data.csproj">
+      <Project>{f38b2d82-5c9c-4b54-9123-2a329f94db0d}</Project>
+      <Name>Music.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
