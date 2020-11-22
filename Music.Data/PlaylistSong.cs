@@ -14,11 +14,8 @@ namespace Music.Data
         public int PlaylistSongId { get; set; }
         [Required]
         public int PlaylistId { get; set; }
-        [ForeignKey(nameof(PlaylistId))]
-        public virtual Playlist Playlist { get; set; }
-        [Required]
-        public int SongId { get; set; }
        
+        public virtual List<PlaylistSong> PlaylistSongs { get; set; } = new List<PlaylistSong>();
 
         public DateTimeOffset? ModifiedUtc { get; set; }
         public Guid PlaylistOwnerId { get; set; }

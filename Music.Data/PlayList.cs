@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,5 +34,8 @@ namespace Music.Data
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
         public virtual List<Song> Songs { get; set; } = new List<Song>();
+        public int PlaylistSongId { get; set; }
+        [ForeignKey(nameof(PlaylistSong))]
+        public virtual PlaylistSong PlaylistSong { get; set; }
     }
 }

@@ -66,10 +66,10 @@ namespace Music.Services
                                 {
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
-                                    
+                                    PlaylistSongId = e.PlaylistSongId,
                                     CreatedUtc = e.CreatedUtc
                                 }
-                        );
+                        ) ;
 
                 return query.ToArray();
             }
