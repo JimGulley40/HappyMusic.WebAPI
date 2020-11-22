@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,9 @@ namespace Music.Data
 
         [Required]
         public TimeSpan SongLength { get; set; }
+        [ForeignKey(nameof(Playlist))]
+        public int PlaylistId { get; set; }
+        public virtual Playlist Playlist { get; set; }
 
     }
 }

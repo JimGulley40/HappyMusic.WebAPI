@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlaylistServices.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Music.Data\Music.Data.csproj">
+      <Project>{f38b2d82-5c9c-4b54-9123-2a329f94db0d}</Project>
+      <Name>Music.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Music.Models\Music.Models.csproj">
+      <Project>{befed536-50a8-4499-9130-d9cb7e7aa01d}</Project>
+      <Name>Music.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

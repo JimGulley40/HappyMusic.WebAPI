@@ -54,6 +54,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlaylistCreate.cs" />
+    <Compile Include="PlaylistDetail.cs" />
+    <Compile Include="PlaylistEdit.cs" />
+    <Compile Include="PlaylistListItem.cs" />
+    <Compile Include="PlaylistSongCreate.cs" />
+    <Compile Include="PlaylistSongDetail.cs" />
+    <Compile Include="PlaylistSongListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

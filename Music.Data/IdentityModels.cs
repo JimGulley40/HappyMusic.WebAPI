@@ -31,11 +31,13 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
-        public DbSet<PlayList>playLists { get; set; }
+        public DbSet<Playlist>Playlist { get; set; }
 
         public DbSet<Album> Album { get; set; }
 
         public DbSet<Song> Song { get; set; }
+        public DbSet<PlaylistSong> PlaylistSong { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
