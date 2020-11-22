@@ -94,6 +94,31 @@
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Playlist.cs" />
+    <Compile Include="Artist.cs" />
+    <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011212337263_InitialCreate.cs" />
+    <Compile Include="Migrations\202011212337263_InitialCreate.Designer.cs">
+      <DependentUpon>202011212337263_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011212345073_gavePlaylistsKeyAndNameProperties.cs" />
+    <Compile Include="Migrations\202011212345073_gavePlaylistsKeyAndNameProperties.Designer.cs">
+      <DependentUpon>202011212345073_gavePlaylistsKeyAndNameProperties.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221358169_updatingAlbumToRunPostman.cs" />
+    <Compile Include="Migrations\202011221358169_updatingAlbumToRunPostman.Designer.cs">
+      <DependentUpon>202011221358169_updatingAlbumToRunPostman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221511147_updatingArtistCrudMethods.cs" />
+    <Compile Include="Migrations\202011221511147_updatingArtistCrudMethods.Designer.cs">
+      <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.cs" />
+    <Compile Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.Designer.cs">
+      <DependentUpon>202011221731509_addedForeignKeyReferenceSongToAlbum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PlayList.cs" />
     <Compile Include="Song.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +132,20 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202011221736171_fixedP.resx">
       <DependentUpon>202011221736171_fixedP.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202011212337263_InitialCreate.resx">
+      <DependentUpon>202011212337263_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011212345073_gavePlaylistsKeyAndNameProperties.resx">
+      <DependentUpon>202011212345073_gavePlaylistsKeyAndNameProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221358169_updatingAlbumToRunPostman.resx">
+      <DependentUpon>202011221358169_updatingAlbumToRunPostman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221511147_updatingArtistCrudMethods.resx">
+      <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.resx">
+      <DependentUpon>202011221731509_addedForeignKeyReferenceSongToAlbum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

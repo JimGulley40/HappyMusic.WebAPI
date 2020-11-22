@@ -5,13 +5,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Music.Data
 {
     public class Playlist
     {
         [Key]
-        public int PlaylistId { get; set; }
+        public int PlaylistId { get; set;}
+        [Required]
         public int SongId { get; set; }
         public string PlaylistName { get; set; }
         [Required]
