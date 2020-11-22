@@ -33,9 +33,11 @@ namespace Music.Data
         }
         public DbSet<PlayList>playLists { get; set; }
 
-        public DbSet<Album> Album { get; set; }
+        public DbSet<Album> Albums { get; set; }
 
         public DbSet<Song> Songs { get; set; }
+       
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
