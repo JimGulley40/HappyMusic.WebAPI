@@ -16,7 +16,6 @@ using Microsoft.Owin.Security.OAuth;
 using HappyMusic.WebAPI.Models;
 using HappyMusic.WebAPI.Providers;
 using HappyMusic.WebAPI.Results;
-using Music.Data;
 
 namespace HappyMusic.WebAPI.Controllers
 {
