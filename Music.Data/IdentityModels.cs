@@ -31,8 +31,8 @@ namespace Music.Data
         {
             return new ApplicationDbContext();
         }
-        public DbSet<PlayList>playLists { get; set; }
-
+        public DbSet<Playlist> Playlist  { get; set; }
+        public DbSet<PlaylistSong> PlaylistSong { get; set; }
         public DbSet<Album> Albums { get; set; }
 
         public DbSet<Song> Songs { get; set; }

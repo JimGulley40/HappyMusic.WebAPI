@@ -28,6 +28,9 @@ namespace Music.Data
         public TimeSpan? SongLength { get; set; }
         //[Required]
         //public Guid OwnerId { get; set; }
+        [ForeignKey(nameof(Playlist))]
+        public int PlaylistId { get; set; }
+        public virtual Playlist Playlist { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
 

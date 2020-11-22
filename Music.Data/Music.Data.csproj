@@ -108,6 +108,7 @@
       <DependentUpon>202011221731509_addedForeignKeyReferenceSongToAlbum.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PlaylistSong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayList.cs" />
     <Compile Include="Song.cs" />
