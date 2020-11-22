@@ -103,6 +103,10 @@
     <Compile Include="Migrations\202011221511147_updatingArtistCrudMethods.Designer.cs">
       <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.cs" />
+    <Compile Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.Designer.cs">
+      <DependentUpon>202011221731509_addedForeignKeyReferenceSongToAlbum.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayList.cs" />
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011221511147_updatingArtistCrudMethods.resx">
       <DependentUpon>202011221511147_updatingArtistCrudMethods.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011221731509_addedForeignKeyReferenceSongToAlbum.resx">
+      <DependentUpon>202011221731509_addedForeignKeyReferenceSongToAlbum.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

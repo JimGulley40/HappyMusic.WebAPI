@@ -16,7 +16,7 @@ namespace Music.Services
             var entity =
                 new Song()
                 {
-                   
+                    AlbumID = model.AlbumID,
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
@@ -44,7 +44,9 @@ namespace Music.Services
                                 {
                                     SongId = e.SongId,
                                     Title = e.Title,
-                                    CreatedUtc = e.CreatedUtc
+                                    CreatedUtc = e.CreatedUtc,
+                                    AlbumId = e.AlbumID, 
+                                    AlbumName = e.Album.Title
                                 }
                         );
 
@@ -67,7 +69,10 @@ namespace Music.Services
                         Lyrics = entity.Lyrics,
                         IsExplicit = entity.IsExplicit,
                         CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        AlbumID = entity.AlbumID,
+                        AlbumName = entity.Album.Title
+
                     };
             }
 
@@ -82,11 +87,14 @@ namespace Music.Services
                         .Single(e => e.SongId == model.SongId);
 
                 entity.Title = model.Title;
+                entity.AlbumID = model.AlbumId;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }
         }
+        // not putting a way to change the album title in here, you can only change
+        //the album to which the song belongs
         public bool DeleteSong(int songId)
         {
             using (var ctx = new ApplicationDbContext())
