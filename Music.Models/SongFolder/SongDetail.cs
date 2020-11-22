@@ -14,5 +14,7 @@ namespace Music.Models
         public DateTimeOffset? ModifiedUtc { get; set; }
         public string Lyrics { get; set; }
         public bool IsExplicit { get; set; }
+        public int AlbumID { get; set;  }
+        public string AlbumName { get; set; }
     }
 }
