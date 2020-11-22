@@ -12,8 +12,6 @@ namespace Music.Services
     {
         private readonly Guid _userId;
 
-        //public object Songs { get; private set; }
-
         public SongService(Guid userId)
         {
             _userId = userId;
@@ -25,8 +23,10 @@ namespace Music.Services
                 {
                     OwnerId = _userId,
                     Title = model.Title,
-                    //Content = model.Content,
-                    // CreatedUtc = DateTimeOffset.Now
+                    Lyrics = model.Lyrics,
+                    IsExplicit = model.IsExplicit,
+
+                     CreatedUtc = DateTimeOffset.Now
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -69,7 +69,8 @@ namespace Music.Services
                     {
                         SongId = entity.SongId,
                         Title = entity.Title,
-
+                        Lyrics = entity.Lyrics,
+                        IsExplicit = entity.IsExplicit,
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
@@ -86,8 +87,7 @@ namespace Music.Services
                         .Single(e => e.SongId == model.SongId && e.OwnerId == _userId);
 
                 entity.Title = model.Title;
-                // entity.Content = model.Content;
-                // entity.ModifiedUtc = DateTimeOffset.UtcNow;
+                entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }

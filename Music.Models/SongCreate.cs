@@ -9,5 +9,7 @@ namespace Music.Models
     public class SongCreate
     {
         public string Title { get; set; }
+        public string Lyrics { get; set; }
+        public bool IsExplicit { get; set; }
     }
 }

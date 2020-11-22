@@ -12,5 +12,7 @@ namespace Music.Models
         public string Title { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public string Lyrics { get; set; }
+        public bool IsExplicit { get; set; }
     }
 }

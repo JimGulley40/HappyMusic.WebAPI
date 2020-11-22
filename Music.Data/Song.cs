@@ -11,30 +11,21 @@ namespace Music.Data
     {
         [Key]
         public int SongId { get; set; }
-
         [Required]
         public string Title { get; set; }
-
-        [Required]
-        public int AlbumID { get; set; }
-
+        //[Required]
+        public int? AlbumID { get; set; }
         [Required]
         public string Lyrics { get; set; }
-
+        //[Required]
+        public int? SongCount { get; set; }
         [Required]
-        public int SongCount { get; set; }
-
-        [Required]
-        public bool ISExplicit { get; set; }
-
-        [Required]
-        public TimeSpan SongLength { get; set; }
-
+        public bool IsExplicit { get; set; }
+        //[Required]
+        public TimeSpan? SongLength { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
-
         public DateTimeOffset CreatedUtc { get; set; }
-
         public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
