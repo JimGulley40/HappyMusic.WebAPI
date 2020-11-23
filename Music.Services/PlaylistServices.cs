@@ -22,9 +22,8 @@ namespace Music.Services
                 new Playlist()
                 {
                     OwnerId = _userId,
-                    SongId = model.SongId,
-
                     PlaylistName = model.PlaylistName,
+                    PlaylistId = model.PlaylistId,
                     CreatedUtc = DateTimeOffset.Now
 
 
@@ -57,6 +56,7 @@ namespace Music.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+                
                 var query =
                     ctx
                         .Playlist
@@ -65,6 +65,7 @@ namespace Music.Services
                             e =>
                                 new PlaylistListItem
                                 {
+                                   
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc
@@ -85,6 +86,7 @@ namespace Music.Services
                 return
                     new PlaylistDetail
                     {
+                        
                         PlaylistId = entity.PlaylistId,
                         Playlistname = entity.PlaylistName,
                         CreatedUtc = entity.CreatedUtc,

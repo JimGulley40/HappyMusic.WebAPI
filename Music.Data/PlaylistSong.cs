@@ -12,13 +12,14 @@ namespace Music.Data
     {
         [Key]
         public int PlaylistSongId { get; set; }
-        [Required]
+       
+        //[ForeignKey(nameof(Playlist))]
         public int PlaylistId { get; set; }
-        [ForeignKey(nameof(PlaylistId))]
-        public virtual Playlist Playlist { get; set; }
-        [Required]
+        //public virtual Playlist Playlist { get; set; }
+       
+        [ForeignKey(nameof(Songs))]
         public int SongId { get; set; }
-
+        public virtual Song Songs { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
         public Guid PlaylistOwnerId { get; set; }
 

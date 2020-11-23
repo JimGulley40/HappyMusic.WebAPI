@@ -8,9 +8,10 @@ namespace Music.Models
 {
     public class SongListItem
     {
+        
         public int SongId { get; set; }
         public string Title { get; set; }
-        
+        public int PlaylistId { get; set; }
         public string AlbumName { get; set; }
         
         public string PlaylistName { get; set; }

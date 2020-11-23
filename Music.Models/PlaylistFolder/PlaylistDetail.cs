@@ -12,12 +12,16 @@ namespace Music.Models
     {
         public int PlaylistId { get; set; }
         public string Playlistname { get; set; }
+        public int SongId { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        public virtual List<Song> Songs { get; set; } = new List<Song>();
+        public int NumberOfSongs { get; set; }
+
+        public List<PlaylistSong> Songs { get; set; } = new List<PlaylistSong>();
+
 
     }
 }

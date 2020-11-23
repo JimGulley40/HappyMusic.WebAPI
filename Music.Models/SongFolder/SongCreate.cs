@@ -13,5 +13,6 @@ namespace Music.Models
         public bool IsExplicit { get; set; }
         public int PlaylistId { get; set; }
         public int AlbumID { get; set; }
+        public string PlaylistName { get; set; }
     }
 }

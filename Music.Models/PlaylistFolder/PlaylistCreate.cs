@@ -12,11 +12,12 @@ namespace Music.Models
     public class PlaylistCreate
     {
         public int SongId { get; set; }
+        public int PlaylistId { get; set; }
         [Required]
         public string PlaylistName { get; set; }
         public int NumberOfSongs { get; set; }
-        public virtual List<Song> Songs { get; set; } = new List<Song>();
+         //public List<PlaylistSong> Songs { get; set; } = new List<PlaylistSong>();
 
-
+        
     }
 }

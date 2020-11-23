@@ -14,11 +14,7 @@ namespace Music.Data
         public int SongId { get; set; }
         [Required]
         public string Title { get; set; }
-       
-        [ForeignKey(nameof(Album))]
-        public int AlbumID { get; set; }
-
-        public virtual Album Album { get; set; }
+      
         [Required]
         public string Lyrics { get; set; }
        
@@ -27,11 +23,9 @@ namespace Music.Data
         public bool IsExplicit { get; set; }
        
        // public TimeSpan? SongLength { get; set; }
-       
-        [ForeignKey(nameof(Playlist))]
-        public int PlaylistId { get; set; }
+        public string PlaylistName { get; set; }
 
-        public virtual Playlist Playlist { get; set; }
+        public int PlaylistId { get; set; }
         //public DateTimeOffset CreatedUtc { get; set; }
         //public DateTimeOffset? ModifiedUtc { get; set; }
 

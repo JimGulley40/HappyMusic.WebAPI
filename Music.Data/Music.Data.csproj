@@ -87,6 +87,19 @@
     <Compile Include="Album.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011230358079_one.cs" />
+    <Compile Include="Migrations\202011230358079_one.Designer.cs">
+      <DependentUpon>202011230358079_one.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011230403358_two.cs" />
+    <Compile Include="Migrations\202011230403358_two.Designer.cs">
+      <DependentUpon>202011230403358_two.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011231328388_three.cs" />
+    <Compile Include="Migrations\202011231328388_three.Designer.cs">
+      <DependentUpon>202011231328388_three.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayList.cs" />
@@ -99,6 +112,17 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011230358079_one.resx">
+      <DependentUpon>202011230358079_one.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011230403358_two.resx">
+      <DependentUpon>202011230403358_two.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011231328388_three.resx">
+      <DependentUpon>202011231328388_three.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
