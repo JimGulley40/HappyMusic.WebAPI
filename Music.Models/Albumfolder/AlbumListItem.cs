@@ -15,5 +15,8 @@ namespace Music.Models
         public string Title { get; set; }
         public DateTime ReleaseDate { get; set; }
         public Genre Genre { get; set; }
+        public List<SongDetail> Songs { get; set; } = new List<SongDetail>();
+        //public int SongId { get; set; }
+        //public string SongTitle { get; set; }
     }
 }

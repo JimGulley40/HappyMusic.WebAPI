@@ -24,7 +24,9 @@ namespace Music.Services
                     //OwnerId = _userId,
                     Title = model.Title,
                     Genre = model.Genre,
-                    ReleaseDate = model.ReleaseDate
+                    ReleaseDate = model.ReleaseDate,
+                   // Songs = model.Songs
+                    
 
                      
                 };
@@ -42,6 +44,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .Albums
+
                         //.Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
@@ -50,9 +53,19 @@ namespace Music.Services
                                     AlbumId = e.AlbumId,
                                     Title = e.Title,
                                     Genre = e.Genre,
-                                    ReleaseDate = e.ReleaseDate
+                                    ReleaseDate = e.ReleaseDate,
+                                    Songs = e.Songs.Select(
+                                        b =>
+                                            new SongDetail
+                                            {
+                                                SongId = b.SongId,
+                                                Title = b.Title,
+                                                IsExplicit= b.IsExplicit,
+                                                
+
+                                            }).ToList()
                                 }
-                        );
+                        ) ;
 
                 return query.ToArray();
             }

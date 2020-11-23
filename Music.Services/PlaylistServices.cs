@@ -65,6 +65,7 @@ namespace Music.Services
                             e =>
                                 new PlaylistListItem
                                 {
+                                    Songs = e.Songs,
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc

@@ -15,7 +15,7 @@ namespace Music.Models
         [Required]
         public string PlaylistName { get; set; }
         public int NumberOfSongs { get; set; }
-        public virtual List<Song> Songs { get; set; } = new List<Song>();
+       // public virtual List<PlaylistSong> Songs { get; set; } = new List<PlaylistSong>();
 
 
     }
