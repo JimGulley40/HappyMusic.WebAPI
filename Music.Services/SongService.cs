@@ -7,7 +7,6 @@ using System.Linq;
 namespace Music.Services
 {
 
-
     public class SongService
     {
                 
@@ -16,12 +15,13 @@ namespace Music.Services
             var entity =
                 new Song()
                 {
+
                     AlbumID = model.AlbumID,
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
-
-                     CreatedUtc = DateTimeOffset.Now
+                    PlaylistId = model.PlaylistId
+                   
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -44,9 +44,8 @@ namespace Music.Services
                                 {
                                     SongId = e.SongId,
                                     Title = e.Title,
-                                    CreatedUtc = e.CreatedUtc,
-                                    AlbumId = e.AlbumID, 
-                                    AlbumName = e.Album.Title
+                                    AlbumName = e.Album.Title,
+                                  PlaylistName = e.Playlist.PlaylistName
                                 }
                         );
 
@@ -68,8 +67,8 @@ namespace Music.Services
                         Title = entity.Title,
                         Lyrics = entity.Lyrics,
                         IsExplicit = entity.IsExplicit,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc,
+                        //CreatedUtc = entity.CreatedUtc,
+                        //ModifiedUtc = entity.ModifiedUtc,
                         AlbumID = entity.AlbumID,
                         AlbumName = entity.Album.Title
 
@@ -88,7 +87,7 @@ namespace Music.Services
 
                 entity.Title = model.Title;
                 entity.AlbumID = model.AlbumId;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+               // entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;
             }

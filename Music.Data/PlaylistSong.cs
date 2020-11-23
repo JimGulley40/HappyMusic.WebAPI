@@ -19,7 +19,6 @@ namespace Music.Data
         [Required]
         public int SongId { get; set; }
 
-
         public DateTimeOffset? ModifiedUtc { get; set; }
         public Guid PlaylistOwnerId { get; set; }
 

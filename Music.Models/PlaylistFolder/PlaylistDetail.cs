@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Music.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -16,5 +17,7 @@ namespace Music.Models
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public virtual List<Song> Songs { get; set; } = new List<Song>();
+
     }
 }

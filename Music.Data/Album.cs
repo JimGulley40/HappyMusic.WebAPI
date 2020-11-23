@@ -22,9 +22,8 @@ namespace Music.Data
 
         [Required]
         public DateTime ReleaseDate { get; set; }
-        public Guid OwnerId { get; set; }
-        public DateTimeOffset CreatedUtc { get; set; }
-        public object ModifiedUtc { get; set; }
+        public virtual List<Song> Songs { get; set; } = new List<Song>();
+
     }
 
 }

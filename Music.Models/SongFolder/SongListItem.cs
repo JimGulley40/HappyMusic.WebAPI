@@ -10,8 +10,10 @@ namespace Music.Models
     {
         public int SongId { get; set; }
         public string Title { get; set; }
-        public DateTimeOffset CreatedUtc { get; set; }
-        public int AlbumId { get; set; }
+        
         public string AlbumName { get; set; }
+        
+        public string PlaylistName { get; set; }
+
     }
 }

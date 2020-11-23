@@ -24,9 +24,9 @@ namespace Music.Services
                     //OwnerId = _userId,
                     Title = model.Title,
                     Genre = model.Genre,
-                    ReleaseDate = model.ReleaseDate,
+                    ReleaseDate = model.ReleaseDate
 
-                     CreatedUtc = DateTimeOffset.Now
+                     
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -49,7 +49,8 @@ namespace Music.Services
                                 {
                                     AlbumId = e.AlbumId,
                                     Title = e.Title,
-                                    CreatedUtc = e.CreatedUtc
+                                    Genre = e.Genre,
+                                    ReleaseDate = e.ReleaseDate
                                 }
                         );
 
@@ -73,8 +74,8 @@ namespace Music.Services
                         Genre = entity.Genre,
                         ReleaseDate = entity.ReleaseDate,
 
-                        CreatedUtc = DateTimeOffset.Now,
-                        ModifiedUtc = entity.ModifiedUtc
+                      
+                      
                     };
             }
 
@@ -89,7 +90,7 @@ namespace Music.Services
                         .Single(e => e.AlbumId == model.AlbumId/* && e.OwnerId == _userId*/);
                 //entity.AlbumId = model.AlbumId;
                 entity.Title = model.Title;
-                entity.ModifiedUtc = DateTimeOffset.UtcNow;
+               
 
                 return ctx.SaveChanges() == 1;
             }

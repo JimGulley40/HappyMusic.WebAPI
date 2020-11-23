@@ -23,6 +23,7 @@ namespace Music.Services
                 {
                     OwnerId = _userId,
                     SongId = model.SongId,
+
                     PlaylistName = model.PlaylistName,
                     CreatedUtc = DateTimeOffset.Now
 
@@ -66,7 +67,6 @@ namespace Music.Services
                                 {
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
-
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );

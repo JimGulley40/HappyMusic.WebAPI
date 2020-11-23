@@ -1,4 +1,5 @@
 ﻿
+using Music.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -14,6 +15,7 @@ namespace Music.Models
         [Required]
         public string PlaylistName { get; set; }
         public int NumberOfSongs { get; set; }
+        public virtual List<Song> Songs { get; set; } = new List<Song>();
 
 
     }
