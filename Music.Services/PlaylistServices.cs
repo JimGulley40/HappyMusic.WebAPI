@@ -64,9 +64,10 @@ namespace Music.Services
                             e =>
                                 new PlaylistListItem
                                 {
+
+                                    Songs = e.Songs,
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
-                                    
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );
@@ -92,7 +93,7 @@ namespace Music.Services
                     };
             }
         }
-       
+
         public bool DeletePlaylist(int noteId)
         {
             using (var ctx = new ApplicationDbContext())
