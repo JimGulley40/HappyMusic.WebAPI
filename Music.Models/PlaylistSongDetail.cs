@@ -1,28 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Music.Data
+namespace Music.Models
 {
-
-    public class PlaylistSong
-
+    public class PlaylistSongDetail
     {
-        [Key]
         public int PlaylistSongId { get; set; }
-        [Required]
         public int PlaylistId { get; set; }
-        [ForeignKey(nameof(PlaylistId))]
-        public virtual Playlist Playlist { get; set; }
-        [Required]
         public int SongId { get; set; }
+        [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
-        public Guid PlaylistOwnerId { get; set; }
-
     }
 }
-

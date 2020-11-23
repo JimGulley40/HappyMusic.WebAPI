@@ -1,3 +1,4 @@
+
 ﻿using Music.Data;
 using Music.Models;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Music.Services
 {
+
     public class PlaylistSongServices
     {
         private readonly Guid _userId;
@@ -93,5 +95,6 @@ namespace Music.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
     }
 }

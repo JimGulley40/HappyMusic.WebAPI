@@ -24,6 +24,7 @@ namespace Music.Data
        
        // public int? SongCount { get; set; }
         [Required]
+
         public bool IsExplicit { get; set; }
        
        // public TimeSpan? SongLength { get; set; }
@@ -34,6 +35,7 @@ namespace Music.Data
         //public virtual Playlist Playlist { get; set; }
         //public DateTimeOffset CreatedUtc { get; set; }
         //public DateTimeOffset? ModifiedUtc { get; set; }
+
 
     }
 }

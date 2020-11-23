@@ -21,7 +21,8 @@ namespace Music.Data
             get
             {
                 int songcounter = 0;
-                foreach (PlaylistSong song in Songs)
+
+                foreach (Song song in Songs)
                 {
                     songcounter++;
                 }
@@ -32,6 +33,8 @@ namespace Music.Data
         public Guid OwnerId { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+
         public virtual List<PlaylistSong> Songs { get; set; } 
+
     }
 }
