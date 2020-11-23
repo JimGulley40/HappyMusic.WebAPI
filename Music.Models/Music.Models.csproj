@@ -54,7 +54,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="AlbumArtistFolder\AlbumArtistCreate.cs" />
+    <Compile Include="AlbumArtistFolder\AlbumArtistDetail.cs" />
+    <Compile Include="AlbumArtistFolder\AlbumArtistEdit.cs" />
+    <Compile Include="AlbumArtistFolder\AlbumArtistListItem.cs" />
     <Compile Include="Albumfolder\AlbumCreate.cs" />
     <Compile Include="Albumfolder\AlbumDetail.cs" />
     <Compile Include="Albumfolder\AlbumEdit.cs" />
@@ -70,7 +73,6 @@
     <Compile Include="PlaylistSongFolder\PlaylistSongCreate.cs" />
     <Compile Include="PlaylistSongFolder\PlaylistSongDetail.cs" />
     <Compile Include="PlaylistSongFolder\PlaylistSongListItem.cs" />
-
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongFolder\SongCreate.cs" />
     <Compile Include="SongFolder\SongDetail.cs" />
@@ -87,5 +89,6 @@
       <Name>Music.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
