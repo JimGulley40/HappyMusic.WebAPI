@@ -22,10 +22,7 @@ namespace HappyMusic.WebAPI.Controllers
             var songs = songService.GetSongs();
             return Ok(songs);
         }
-        /// <summary>
-        /// creates a song
-        /// </summary>
-        /// <returns></returns>
+
         private SongService CreateSongService()
         {
             
@@ -33,9 +30,9 @@ namespace HappyMusic.WebAPI.Controllers
             return songService;
         }
         /// <summary>
-        /// posts a song
+        /// Create a song
         /// </summary>
-        /// <param name="song">pass a song name</param>
+        /// <param name="song">Pass a song name</param>
         /// <returns></returns>
         public IHttpActionResult Post(SongCreate song)
         {
@@ -50,7 +47,7 @@ namespace HappyMusic.WebAPI.Controllers
             return Ok();
         }
         /// <summary>
-        /// get a song by ID
+        /// Get a song by ID
         /// </summary>
         /// <param name="id">Pass a song ID</param>
         /// <returns></returns>
@@ -61,7 +58,7 @@ namespace HappyMusic.WebAPI.Controllers
             return Ok(song);
         }
         /// <summary>
-        /// Edit a specific song
+        /// Edit a song by ID
         /// </summary>
         /// <param name="song">Pass a song name</param>
         /// <returns></returns>
