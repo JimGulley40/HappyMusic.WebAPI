@@ -1,4 +1,7 @@
 # HappyMusic.WebAPI
+## What is HappyMusic?
+HappyMusic is an application for a person to use that stores all their music--Think something similar to Spotify. A User can go in and create a playlist, adding their favorite songs to it. A user can also see the songs on a particular Album, or Artists that have collaborated on a particular Album. 
+
 ## Purpose of this API
 The purose of Our API is to be an interface with a database of songs and the related data. The API should be run in Visual studio with version 4.8 or higher. 
 
