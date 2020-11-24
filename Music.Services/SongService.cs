@@ -20,6 +20,7 @@ namespace Music.Services
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
+                    AlbumName = model.AlbumName
                    // PlaylistId = model.PlaylistId
                    
                 };
@@ -44,7 +45,7 @@ namespace Music.Services
                                 {
                                     SongId = e.SongId,
                                     Title = e.Title,
-                                    AlbumName = e.Album.Title,
+                                    AlbumName = e.AlbumName,
                                     PlaylistName = e.PlaylistName,
                                     //PlaylistId =e.PlaylistId
                                 }
@@ -70,7 +71,7 @@ namespace Music.Services
                         IsExplicit = entity.IsExplicit,
                         //CreatedUtc = entity.CreatedUtc,
                         //ModifiedUtc = entity.ModifiedUtc,
-                        AlbumID = entity.AlbumID,
+                        
                         AlbumName = entity.Album.Title
 
                     };

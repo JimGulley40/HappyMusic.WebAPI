@@ -20,7 +20,7 @@ namespace Music.Data
         //public virtual Playlist Playlist { get; set; }
         [Required]
         public int SongId { get; set; }
-        public DateTimeOffset? ModifiedUtc { get; set; }
+        public DateTimeOffset ModifiedUtc { get; set; }
         public Guid PlaylistOwnerId { get; set; }
        
 

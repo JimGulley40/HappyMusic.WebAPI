@@ -14,10 +14,10 @@ namespace Music.Data
         public int SongId { get; set; }
         [Required]
         public string Title { get; set; }
-       
+
+        public string AlbumName {get;set;}
         [ForeignKey(nameof(Album))]
         public int AlbumID { get; set; }
-
         public virtual Album Album { get; set; }
         [Required]
         public string Lyrics { get; set; }
