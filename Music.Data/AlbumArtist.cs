@@ -12,12 +12,12 @@ namespace Music.Data
     {
         [Key]
         public int AlbumArtistId { get; set; }
-        [Required]
+        //[Required]
         public int AlbumId { get; set; }
-        [ForeignKey(nameof(AlbumId))]
-        public virtual Album Album { get; set; }
+        //[ForeignKey(nameof(AlbumId))]
+        public virtual List<Album> Album { get; set; } = new List<Album>();
         public int ArtistId { get; set; }
-        [ForeignKey(nameof(ArtistId))]
-        public virtual Artist Artist { get; set; }
+        //[ForeignKey(nameof(ArtistId))]
+        public virtual List<Artist> Artist { get; set; } = new List<Artist>();
     }
 }

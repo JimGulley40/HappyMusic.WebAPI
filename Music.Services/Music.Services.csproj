@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-
+    <Compile Include="AlbumArtistService.cs" />
     <Compile Include="ArtistService.cs" />
     <Compile Include="PlaylistServices.cs" />
     <Compile Include="PlaylistSongServices.cs" />
