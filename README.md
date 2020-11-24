@@ -4,12 +4,12 @@ HappyMusic is an application for a person to use that stores all their music--Th
 
 ## Purpose of this API
 The purose of Our API is to be an interface with a database of songs and the related data. The API should be run in Visual studio with version 4.8 or higher. 
-
+## Data Structure
+ ![DataTables](/Images/DataTables.png)
 
 ## API Documentation
 The API documentation can be found by running the app in visual studio and adding sagger to the end of the address bar on the asp.net home page
-ApiEndPoints1.png
- ![DataTables](/Images/DataTables.png)
+
  ![ApiEndPoints1](/Images/ApiEndPoints1.png)
  ![ApiEndPoints2](/Images/ApiEndPoints2.png)
 ## Resources Used
