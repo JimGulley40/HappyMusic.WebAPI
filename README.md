@@ -7,6 +7,7 @@ The purose of Our API is to be an interface with a database of songs and the rel
 The API documentation can be found by running the app in visual studio and adding sagger to the end of the address bar on the asp.net home page
 
  [data table flow](/Images/DataTables.png)
+ ![DataTables](/Images/DataTables.png)
 
 ## Resources Used
 Video used to learn how to Customize the Endpoint Documentation in Swagger https://youtu.be/tyesYzBnS4A  
