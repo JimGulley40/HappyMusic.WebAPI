@@ -21,12 +21,13 @@ namespace Music.Data
         public virtual Album Album { get; set; }
         [Required]
         public string Lyrics { get; set; }
-       
-       // public int? SongCount { get; set; }
+      
+        // public int? SongCount { get; set; }
         [Required]
 
         public bool IsExplicit { get; set; }
-       
+        public string PlaylistName { get; set; }
+        
        // public TimeSpan? SongLength { get; set; }
        
         //[ForeignKey(nameof(Playlist))]

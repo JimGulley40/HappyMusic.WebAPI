@@ -26,9 +26,7 @@ namespace Music.Services
                     Genre = model.Genre,
                     ReleaseDate = model.ReleaseDate,
                    // Songs = model.Songs
-                    
-
-                     
+  
                 };
 
             using (var ctx = new ApplicationDbContext())

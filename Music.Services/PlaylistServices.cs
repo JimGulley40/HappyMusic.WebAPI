@@ -66,7 +66,7 @@ namespace Music.Services
                                 new PlaylistListItem
                                 {
 
-                                    Songs = e.Songs,
+                                    Songs=e.PlaylistSong,
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc
@@ -90,19 +90,20 @@ namespace Music.Services
                         PlaylistId = entity.PlaylistId,
                         Playlistname = entity.PlaylistName,
                         CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc
+                        ModifiedUtc = entity.ModifiedUtc,
+                        NumberOfSongs = entity.NumberOfSongs
                     };
             }
         }
 
-        public bool DeletePlaylist(int noteId)
+        public bool DeletePlaylist(int playlistId)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Playlist
-                        .Single(e => e.PlaylistId == noteId && e.OwnerId == _userId);
+                        .Single(e => e.PlaylistId == playlistId && e.OwnerId == _userId);
 
                 ctx.Playlist.Remove(entity);
 
