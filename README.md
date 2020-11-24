@@ -6,7 +6,6 @@ The purose of Our API is to be an interface with a database of songs and the rel
 ## API Documentation
 The API documentation can be found by running the app in visual studio and adding sagger to the end of the address bar on the asp.net home page
 
- [data table flow](/Images/DataTables.png)
  ![DataTables](/Images/DataTables.png)
 
 ## Resources Used
@@ -15,3 +14,4 @@ Trello board for work flow can be found here: https://trello.com/b/ZYGAmQCe/musi
 Google Dock for Data Diagram and intial planning can be found here:https://docs.google.com/spreadsheets/d/1sp65-SZqH7f_a67VP-kF2s9rJ7kDOkzDy7KSMEh8qKI/edit#gid=1800955100  
 Note the Google Doc has several tabs used in the different phases of planning  
 Github Markup Language guide https://guides.github.com/features/mastering-markdown/  
+Vide to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
