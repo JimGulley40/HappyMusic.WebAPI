@@ -15,9 +15,9 @@ namespace Music.Data
         //[Required]
         public int AlbumId { get; set; }
         //[ForeignKey(nameof(AlbumId))]
-        public virtual List<Album> Album { get; set; } = new List<Album>();
+        //public virtual List<Album> Album { get; set; } = new List<Album>();
         public int ArtistId { get; set; }
         //[ForeignKey(nameof(ArtistId))]
-        public virtual List<Artist> Artist { get; set; } = new List<Artist>();
+        //public virtual List<Artist> Artist { get; set; } = new List<Artist>();
     }
 }
