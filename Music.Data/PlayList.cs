@@ -22,7 +22,7 @@ namespace Music.Data
             {
                 int songcounter = 0;
 
-                foreach (Song song in Songs)
+                foreach (PlaylistSong song in Songs)
                 {
                     songcounter++;
                 }
