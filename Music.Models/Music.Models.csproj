@@ -73,6 +73,10 @@
     <Compile Include="PlaylistSongFolder\PlaylistSongCreate.cs" />
     <Compile Include="PlaylistSongFolder\PlaylistSongDetail.cs" />
     <Compile Include="PlaylistSongFolder\PlaylistSongListItem.cs" />
+    <Compile Include="ProfileFolder\ProfileCreate.cs" />
+    <Compile Include="ProfileFolder\ProfileDetail.cs" />
+    <Compile Include="ProfileFolder\ProfileEdit.cs" />
+    <Compile Include="ProfileFolder\ProfileListItems.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongFolder\SongCreate.cs" />
     <Compile Include="SongFolder\SongDetail.cs" />

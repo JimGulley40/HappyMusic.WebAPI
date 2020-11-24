@@ -59,8 +59,8 @@ namespace Music.Services
                                                 SongId = b.SongId,
                                                 Title = b.Title,
                                                 IsExplicit= b.IsExplicit,
-                                                
-
+                                                Lyrics = b.Lyrics,
+                                                AlbumName=b.AlbumName
                                             }).ToList()
                                 }
                         ) ;
