@@ -87,15 +87,6 @@
     <Compile Include="Album.cs" />
     <Compile Include="Artist.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202011231549052_AddedForeignKeyRelationship.cs" />
-    <Compile Include="Migrations\202011231549052_AddedForeignKeyRelationship.Designer.cs">
-      <DependentUpon>202011231549052_AddedForeignKeyRelationship.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011231604292_TakeAwayPlaylistForeignKey.cs" />
-    <Compile Include="Migrations\202011231604292_TakeAwayPlaylistForeignKey.Designer.cs">
-      <DependentUpon>202011231604292_TakeAwayPlaylistForeignKey.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayList.cs" />
@@ -108,15 +99,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-
-    <EmbeddedResource Include="Migrations\202011231549052_AddedForeignKeyRelationship.resx">
-      <DependentUpon>202011231549052_AddedForeignKeyRelationship.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011231604292_TakeAwayPlaylistForeignKey.resx">
-      <DependentUpon>202011231604292_TakeAwayPlaylistForeignKey.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,7 +26,8 @@ namespace Music.Data
         [Required]
 
         public bool IsExplicit { get; set; }
-       
+        public string PlaylistName { get; set; }
+        
        // public TimeSpan? SongLength { get; set; }
        
         //[ForeignKey(nameof(Playlist))]

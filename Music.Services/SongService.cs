@@ -20,7 +20,7 @@ namespace Music.Services
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
-                    //PlaylistId = model.PlaylistId
+                   // PlaylistId = model.PlaylistId
                    
                 };
 
@@ -45,7 +45,8 @@ namespace Music.Services
                                     SongId = e.SongId,
                                     Title = e.Title,
                                     AlbumName = e.Album.Title,
-                                  //PlaylistName = e.Playlist.PlaylistName
+                                    PlaylistName = e.PlaylistName,
+                                    //PlaylistId =e.PlaylistId
                                 }
                         );
 
