@@ -12,6 +12,10 @@ The API documentation can be found by running the app in visual studio and addin
 
  ![ApiEndPoints1](/Images/ApiEndPoints1.png)
  ![ApiEndPoints2](/Images/ApiEndPoints2.png)
+ ## Customized API Endpoint Example
+ This illustration shows where XmL Comments show up in the ApI Endpoint Documentation within the Swagger view. Also isllusted is that the documentation in swagger suggests Properties from the model level of the API that are referenced by the specific controller the end point is reffering to.
+ ![XmlExample](/Images/XmlExample.png)
+ 
 ## Resources Used
 Video used to learn how to Customize the Endpoint Documentation in Swagger https://youtu.be/tyesYzBnS4A  
 Trello board for work flow can be found here: https://trello.com/b/ZYGAmQCe/music-app-blue-badge-challenge  
