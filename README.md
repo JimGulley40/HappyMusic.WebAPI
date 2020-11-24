@@ -8,9 +8,10 @@ The purose of Our API is to be an interface with a database of songs and the rel
 
 ## API Documentation
 The API documentation can be found by running the app in visual studio and adding sagger to the end of the address bar on the asp.net home page
-
+ApiEndPoints1.png
  ![DataTables](/Images/DataTables.png)
-
+ ![ApiEndPoints1](/Images/ApiEndPoints1.png)
+ ![ApiEndPoints2](/Images/ApiEndPoints2.png)
 ## Resources Used
 Video used to learn how to Customize the Endpoint Documentation in Swagger https://youtu.be/tyesYzBnS4A  
 Trello board for work flow can be found here: https://trello.com/b/ZYGAmQCe/music-app-blue-badge-challenge  
