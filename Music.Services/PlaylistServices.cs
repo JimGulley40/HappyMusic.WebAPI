@@ -69,7 +69,8 @@ namespace Music.Services
                                     Songs=e.PlaylistSong,
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
-                                    CreatedUtc = e.CreatedUtc
+                                    CreatedUtc = e.CreatedUtc,
+                                    NumberOfSongs=e.PlaylistSong.Count
                                 }
                         );
 
