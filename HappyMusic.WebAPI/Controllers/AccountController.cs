@@ -84,6 +84,13 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // GET api/Account/ManageInfo?returnUrl=%2F&generateState=true
+
+        /// <summary>
+        /// Get the Account info to Manage user account
+        /// </summary>
+        /// <param name="returnUrl">Pass URL</param>
+        /// <param name="generateState">Pass generate State</param>
+        /// <returns></returns>
         [Route("ManageInfo")]
         public async Task<ManageInfoViewModel> GetManageInfo(string returnUrl, bool generateState = false)
         {
