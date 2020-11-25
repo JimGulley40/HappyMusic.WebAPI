@@ -20,7 +20,8 @@ namespace Music.Services
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
-                    AlbumName = model.AlbumName
+                    AlbumName = model.AlbumName,
+                    ProfileId = model.ProfileId
                    // PlaylistId = model.PlaylistId
                    
                 };
@@ -45,9 +46,10 @@ namespace Music.Services
                                 {
                                     SongId = e.SongId,
                                     Title = e.Title,
-                                    AlbumName = e.AlbumName,
-                                    PlaylistName = e.PlaylistName,
-                                    //PlaylistId =e.PlaylistId
+                                    AlbumName = e.Album.Title,
+                                    
+                                    
+                                    //PlaylistName =e.PlaylistId
                                 }
                         );
 
@@ -71,7 +73,7 @@ namespace Music.Services
                         IsExplicit = entity.IsExplicit,
                         //CreatedUtc = entity.CreatedUtc,
                         //ModifiedUtc = entity.ModifiedUtc,
-                        
+                       
                         AlbumName = entity.Album.Title
 
                     };
@@ -89,6 +91,7 @@ namespace Music.Services
 
                 entity.Title = model.Title;
                 entity.AlbumID = model.AlbumId;
+                entity.ProfileId = model.ProfileId;
                // entity.ModifiedUtc = DateTimeOffset.UtcNow;
 
                 return ctx.SaveChanges() == 1;

@@ -38,6 +38,7 @@ namespace Music.Data
         public DbSet<Song> Songs { get; set; }
         public DbSet<Artist> Artists { get; set; }
         public DbSet<AlbumArtist> AlbumArtist { get; set; }
+        public DbSet<Profile> Profile { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

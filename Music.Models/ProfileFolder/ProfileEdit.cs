@@ -9,7 +9,8 @@ namespace Music.Models.ProfileFolder
     public class ProfileEdit
     {
         
-        public string Username { get; set; }
-       
+        public string UserName { get; set; }
+        public int ProfileId { get; set; }
+
     }
 }

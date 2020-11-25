@@ -13,6 +13,7 @@ namespace Music.Models
         public int AlbumId { get; set; }
         public int PlaylistId { get; set; }
         public int PlaylistSongId { get; set; }
+        public int ProfileId { get; set; }
 
     }
 }

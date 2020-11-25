@@ -54,7 +54,7 @@ namespace Music.Services
                                 {
                                     PlaylistId = e.PlaylistId,
                                     PlaylistSongId = e.PlaylistSongId,
-                                    
+                                    SongId =e.SongId
 
                                 }
                         );

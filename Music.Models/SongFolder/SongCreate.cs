@@ -12,6 +12,8 @@ namespace Music.Models
         public string Lyrics { get; set; }
         public bool IsExplicit { get; set; }
         public int PlaylistId { get; set; }
+        public int ProfileId { get; set; }
+
         public string AlbumName { get; set; }
         public int AlbumID { get; set; }
     }
