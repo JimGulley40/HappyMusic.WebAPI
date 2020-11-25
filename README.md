@@ -1,13 +1,18 @@
 # HappyMusic.WebAPI
 ## What is HappyMusic?
 HappyMusic is an application for a person to use that stores all their music--Think something similar to Spotify. A User can go in and create a playlist, adding their favorite songs to it. A user can also see the songs on a particular Album, or Artists that have collaborated on a particular Album. 
+## How To Use This API
+This APi application is run in Visual Studio To run Clone this repository from github to your local machine and run the application.  
+
+Albums are tied to songs with a foriegn key relationship The album the song belongs to has to be created before the song can be created, if there is only one song in the album label it appropriately with the song name and Single or EP to designate only one song exists in the album.
 
 ## Purpose of this API
 The purose of Our API is to be an interface with a database of songs and the related data. The API should be run in Visual studio with version 4.8 or higher. 
+## How to use the 
 ## Data Structure
  ![DataTables](/Images/DataTables.png)
 ## Used Help Page API End Point Documentation
-We decided to use the Documentation built into the API's help page to customize our Documentation With XML Comments. 
+We used the Documentation built into the API's help page to customize our Documentation With XML Comments. 
 ![APIDOC1](/Images/APIDOC1.png)
 ![APIDOC2](/Images/APIDOC2.png)
 ![APIDOC3](/Images/APIDOC3.png)
@@ -29,3 +34,4 @@ Github Markup Language guide https://guides.github.com/features/mastering-markdo
 Vide to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
 Instructions to enable XML Comments to customize API documentation on help page https://stackoverflow.com/questions/24284413/webapi-help-page-description  
 Hex Color illustrator https://www.color-hex.com/  
+Article about using Swagger and ASP.Net Documentation https://www.c-sharpcorner.com/article/web-api-documentation-using-swagger-and-asp-net-core-with-visual-studio-2019/
