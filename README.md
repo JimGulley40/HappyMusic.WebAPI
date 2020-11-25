@@ -7,7 +7,7 @@ The purose of Our API is to be an interface with a database of songs and the rel
 ## Data Structure
  ![DataTables](/Images/DataTables.png)
 
-## API End Point Documentation
+## Unused Swagger API End Point Documentation
 The API documentation can be found by running the app in visual studio and adding sagger to the end of the address bar on the asp.net home page
 
  ![ApiEndPoints1](/Images/ApiEndPoints1.png)
