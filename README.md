@@ -12,12 +12,12 @@ The purose of Our API is to be an interface with a database of songs and the rel
 ## Data Structure
  ![DataTables](/Images/DataTables.png)
 ## Used Help Page API End Point Documentation
-We used the Documentation built into the API's help page to customize our Documentation With XML Comments. 
+Option #1 to view our API Documentation is through the API's help page we used this to customize our Documentation With XML Comments. 
 ![APIDOC1](/Images/APIDOC1.png)
 ![APIDOC2](/Images/APIDOC2.png)
 ![APIDOC3](/Images/APIDOC3.png)
-## Unused Swagger API End Point Documentation
-The API documentation was originally found by running the app in visual studio and adding swagger to the end of the address bar on the asp.net home page but was changed to the help page more easily accessed when running the application.
+## Swagger API End Point Documentation
+Option #2 The API documentation can also bey found by running the app in visual studio and adding swagger to the end of the address bar on the asp.net home page.
 
  ![ApiEndPoints1](/Images/ApiEndPoints1.png)
  ![ApiEndPoints2](/Images/ApiEndPoints2.png)
