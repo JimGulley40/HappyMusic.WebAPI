@@ -34,4 +34,6 @@ Github Markup Language guide https://guides.github.com/features/mastering-markdo
 Vide to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
 Instructions to enable XML Comments to customize API documentation on help page https://stackoverflow.com/questions/24284413/webapi-help-page-description  
 Hex Color illustrator https://www.color-hex.com/  
-Article about using Swagger and ASP.Net Documentation https://www.c-sharpcorner.com/article/web-api-documentation-using-swagger-and-asp-net-core-with-visual-studio-2019/
+Article about using Swagger and ASP.Net Documentation https://www.c-sharpcorner.com/article/web-api-documentation-using-swagger-and-asp-net-core-with-visual-studio-2019/  
+Video about adding xml comments in Swagger https://www.youtube.com/watch?v=tyesYzBnS4A  
+
