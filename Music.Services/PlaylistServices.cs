@@ -66,11 +66,12 @@ namespace Music.Services
                                 new PlaylistListItem
                                 {
                                     
-                                    Songs=e.PlaylistSong,
                                     PlaylistId = e.PlaylistId,
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc,
-                                    NumberOfSongs=e.PlaylistSong.Count
+                                    NumberOfSongs=e.PlaylistSong.Count,
+                                    Songs=e.PlaylistSong
+
                                 }
                         );
 

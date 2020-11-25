@@ -21,7 +21,10 @@ namespace Music.Data
         public virtual Album Album { get; set; }
         [Required]
         public string Lyrics { get; set; }
-      
+
+        [ForeignKey(nameof(Profile))]
+        public int ProfileId { get; set; }
+        public virtual Profile Profile { get; set; }
         // public int? SongCount { get; set; }
         [Required]
 

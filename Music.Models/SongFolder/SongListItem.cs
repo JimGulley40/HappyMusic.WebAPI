@@ -13,7 +13,7 @@ namespace Music.Models
         
         public string AlbumName { get; set; }
        
-        public string PlaylistName { get; set; }
+       
 
     }
 }

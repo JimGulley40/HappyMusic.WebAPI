@@ -10,8 +10,8 @@ namespace Music.Models.ProfileFolder
     public class ProfileDetail
     {
         public int ProfileId { get; set; }
-        public string Username { get; set; }
+        public string UserName { get; set; }
         public DateTime StartDate { get; set; }
-        public virtual List<Song> Songs { get; set; }
+
     }
 }
