@@ -12,7 +12,7 @@ namespace HappyMusic.WebAPI.Controllers
     {
         // GET api/values
         /// <summary>
-        /// will list out all values
+        /// Get list out all values
         /// </summary>
         /// <returns></returns>
         public IEnumerable<string> Get()
@@ -22,7 +22,7 @@ namespace HappyMusic.WebAPI.Controllers
 
         // GET api/values/5
         /// <summary>
-        /// get specific content
+        /// Get specific content
         /// </summary>
         /// <param name="id">Pass an ID</param>
         /// <returns></returns>
@@ -33,7 +33,7 @@ namespace HappyMusic.WebAPI.Controllers
 
         // POST api/values
         /// <summary>
-        /// posts a string value
+        /// Create a string value
         /// </summary>
         /// <param name="value"></param>
         public void Post([FromBody]string value)
