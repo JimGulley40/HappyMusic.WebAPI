@@ -28,3 +28,4 @@ Note the Google Doc has several tabs used in the different phases of planning
 Github Markup Language guide https://guides.github.com/features/mastering-markdown/  
 Vide to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
 Instructions to enable XML Comments to customize API documentation on help page https://stackoverflow.com/questions/24284413/webapi-help-page-description  
+Hex Color illustrator https://www.color-hex.com/  
