@@ -256,7 +256,7 @@ namespace HappyMusic.WebAPI
 
         private static string  GetXmlCommentsPath()
         {
-            return System.AppDomain.CurrentDomain.BaseDirectory + @"bin\HappyMusic.WebAPI.xml";
+            return System.AppDomain.CurrentDomain.BaseDirectory + @"App_Data/XmlDocument.xml";
         }
     }
 }

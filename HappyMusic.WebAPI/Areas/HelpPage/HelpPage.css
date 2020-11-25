@@ -22,7 +22,7 @@
     margin-top: 20px;
     padding: 0 10px;
     color: #525252;
-    background: #EFDCA9; 
+    background: #df9d20;
     border: 1px solid #CCCCCC;
 }
 
@@ -55,9 +55,9 @@
     font-size: 100%;
 }
 
-.help-page-table tbody tr:hover td {
-    background-color: #F3F3F3;
-}
+    .help-page-table tbody tr:hover td {
+        background-color: #2bd6d2;
+    }
 
 .help-page a:hover {
     background-color: transparent;
@@ -65,7 +65,7 @@
 
 .help-page .sample-header {
     border: 2px solid #D4D4D4;
-    background: #00497E;
+    background: #29d2ce;
     color: #FFFFFF;
     padding: 8px 15px;
     border-bottom: none;
@@ -77,7 +77,7 @@
     display: block;
     border-width: 0;
     padding: 15px 20px;
-    background: #FFFFFF;
+    background: #49bfb0;
     border: 2px solid #D4D4D4;
     margin: 0px 0px 10px 0px;
 }
@@ -126,9 +126,10 @@
     font-size: 14px;
     line-height: 143%;
     color: #333;
+  
 }
 
 .help-page a {
-    color: #0000EE;
+    color: #234bd8;
     text-decoration: none;
 }
