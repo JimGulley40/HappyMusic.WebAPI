@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Music.Models
 {
+  
     public class ArtistCreate
     {
         [Key]

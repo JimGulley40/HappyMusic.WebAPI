@@ -60,8 +60,14 @@ namespace Music.Services
                                                 Title = b.Title,
                                                 IsExplicit= b.IsExplicit,
                                                 Lyrics = b.Lyrics,
+
                                                 AlbumName=b.Album.Title
-                                            }).ToList()
+
+
+                                                
+                                            }).ToList(),
+                                    AlbumArtist = e.AlbumArtist
+
                                 }
                         ) ;
 

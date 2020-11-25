@@ -36,23 +36,9 @@ namespace Music.Services
                         e =>
                         new AlbumArtistListItem
                         {
-                            Artist = e.Artist.Select(
-                                r =>
-                                new ArtistDetail
-                                {
-                                    ArtistName = r.ArtistName,
-                                    ArtistId = r.ArtistId 
-
-                                }).ToList(),
-
-                            Albums = e.Album.Select(
-                                b =>
-                                new AlbumDetail
-                                {
-                                    AlbumId = b.AlbumId,
-                                    Title = b.Title,
-                                    Genre = b.Genre
-                                }).ToList()
+                            
+                            AlbumId = e.AlbumId,
+                            ArtistId = e.ArtistId
                              
                         }) ;
                 return query.ToArray();

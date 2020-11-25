@@ -12,6 +12,10 @@ namespace HappyMusic.WebAPI.Controllers
 {
     public class SongController : ApiController
     {
+        /// <summary>
+        /// Gets a list of all songs
+        /// </summary>
+        /// <returns></returns>
         public IHttpActionResult Get()
         {
             SongService songService = CreateSongService();
@@ -25,6 +29,11 @@ namespace HappyMusic.WebAPI.Controllers
             var songService = new SongService();
             return songService;
         }
+        /// <summary>
+        /// Create a song
+        /// </summary>
+        /// <param name="song">Pass a song name</param>
+        /// <returns></returns>
         public IHttpActionResult Post(SongCreate song)
         {
             if (!ModelState.IsValid)
@@ -37,13 +46,22 @@ namespace HappyMusic.WebAPI.Controllers
 
             return Ok();
         }
-
+        /// <summary>
+        /// Get a song by ID
+        /// </summary>
+        /// <param name="id">Pass a song ID</param>
+        /// <returns></returns>
         public IHttpActionResult Get(int id)
         {
             SongService songService = CreateSongService();
             var song = songService.GetSongById(id);
             return Ok(song);
         }
+        /// <summary>
+        /// Edit a song by ID
+        /// </summary>
+        /// <param name="song">Pass a song name</param>
+        /// <returns></returns>
         public IHttpActionResult Put(SongEdit song)
         {
             if (!ModelState.IsValid)
@@ -56,13 +74,17 @@ namespace HappyMusic.WebAPI.Controllers
 
             return Ok();
         }
+        /// <summary>
+        /// Delete a song by ID
+        /// </summary>
+        /// <param name="id">Pass a song ID</param>
+        /// <returns></returns>
         public IHttpActionResult Delete(int id)
         {
             var service = CreateSongService();
 
             if (!service.DeleteSong(id))
                 return InternalServerError();
-
             return Ok();
         }
 

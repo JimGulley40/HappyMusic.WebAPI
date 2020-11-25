@@ -53,6 +53,10 @@ namespace HappyMusic.WebAPI.Controllers
         public ISecureDataFormat<AuthenticationTicket> AccessTokenFormat { get; private set; }
 
         // GET api/Account/UserInfo
+        /// <summary>
+        /// Get a list of accounts with user info
+        /// </summary>
+        /// <returns></returns>
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("UserInfo")]
         public UserInfoViewModel GetUserInfo()
@@ -68,6 +72,10 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/Logout
+        /// <summary>
+        /// Logout
+        /// </summary>
+        /// <returns></returns>
         [Route("Logout")]
         public IHttpActionResult Logout()
         {
@@ -116,6 +124,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/ChangePassword
+        /// <summary>
+        /// Change password
+        /// </summary>
+        /// <param name="model">Pass New Password</param>
+        /// <returns></returns>
         [Route("ChangePassword")]
         public async Task<IHttpActionResult> ChangePassword(ChangePasswordBindingModel model)
         {
@@ -136,6 +149,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/SetPassword
+        /// <summary>
+        /// Set the Password
+        /// </summary>
+        /// <param name="model">Pass a Password</param>
+        /// <returns></returns>
         [Route("SetPassword")]
         public async Task<IHttpActionResult> SetPassword(SetPasswordBindingModel model)
         {
@@ -155,6 +173,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/AddExternalLogin
+        /// <summary>
+        /// Login to user account
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         [Route("AddExternalLogin")]
         public async Task<IHttpActionResult> AddExternalLogin(AddExternalLoginBindingModel model)
         {
@@ -193,6 +216,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/RemoveLogin
+        /// <summary>
+        /// Remove a user login
+        /// </summary>
+        /// <param name="model">Pass User ID</param>
+        /// <returns></returns>
         [Route("RemoveLogin")]
         public async Task<IHttpActionResult> RemoveLogin(RemoveLoginBindingModel model)
         {
@@ -222,6 +250,12 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // GET api/Account/ExternalLogin
+        /// <summary>
+        /// External Login
+        /// </summary>
+        /// <param name="provider">Pass the Provider ID</param>
+        /// <param name="error">Pass in error type</param>
+        /// <returns></returns>
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalCookie)]
         [AllowAnonymous]
@@ -279,6 +313,12 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // GET api/Account/ExternalLogins?returnUrl=%2F&generateState=true
+        /// <summary>
+        /// Allow Anonomous logins
+        /// </summary>
+        /// <param name="returnUrl">Pass a return url</param>
+        /// <param name="generateState">Pass a generate state</param>
+        /// <returns></returns>
         [AllowAnonymous]
         [Route("ExternalLogins")]
         public IEnumerable<ExternalLoginViewModel> GetExternalLogins(string returnUrl, bool generateState = false)
@@ -320,6 +360,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/Register
+        /// <summary>
+        /// Register Account
+        /// </summary>
+        /// <param name="model">Pass a user name</param>
+        /// <returns></returns>
         [AllowAnonymous]
         [Route("Register")]
         public async Task<IHttpActionResult> Register(RegisterBindingModel model)
@@ -342,6 +387,11 @@ namespace HappyMusic.WebAPI.Controllers
         }
 
         // POST api/Account/RegisterExternal
+        /// <summary>
+        /// Create an external login
+        /// </summary>
+        /// <param name="model">Pass a user name</param>
+        /// <returns></returns>
         [OverrideAuthentication]
         [HostAuthentication(DefaultAuthenticationTypes.ExternalBearer)]
         [Route("RegisterExternal")]
