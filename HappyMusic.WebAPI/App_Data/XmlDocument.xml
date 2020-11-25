@@ -493,6 +493,14 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.AccountController.GetManageInfo(System.String,System.Boolean)">
+            <summary>
+            Get the Account info to Manage user account
+            </summary>
+            <param name="returnUrl">Pass URL</param>
+            <param name="generateState">Pass generate State</param>
+            <returns></returns>
+        </member>
         <member name="M:HappyMusic.WebAPI.Controllers.AccountController.ChangePassword(HappyMusic.WebAPI.Models.ChangePasswordBindingModel)">
             <summary>
             Change password
