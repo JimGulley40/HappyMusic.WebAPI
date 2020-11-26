@@ -13,7 +13,7 @@ namespace Music.Models
         [Key]
         public int ArtistId { get; set; }
         public Guid OwnerId { get; set; }
-        public object ArtistName { get; set; }
+        public string ArtistName { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public object ModifiedUtc { get; set; }
     }

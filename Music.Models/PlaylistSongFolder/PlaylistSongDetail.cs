@@ -12,7 +12,8 @@ namespace Music.Models
         public int PlaylistSongId { get; set; }
         public int PlaylistId { get; set; }
         public int SongId { get; set; }
-        [Display(Name = "Modified")]
-        public DateTimeOffset? ModifiedUtc { get; set; }
+
+        
+        
     }
 }

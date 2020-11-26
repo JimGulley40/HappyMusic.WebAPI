@@ -15,7 +15,7 @@ namespace Music.Models
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         public int NumberOfSongs { get; set; }
-        public List<PlaylistSong> Songs { get; set; } 
-        
+        public List<PlaylistSong> Songs { get; set; } = new List<PlaylistSong>();
+
     }
 }

@@ -76,7 +76,7 @@ namespace Music.Services
                         PlaylistId = entity.PlaylistId,
                         PlaylistSongId = entity.PlaylistSongId,
                         SongId = entity.SongId,
-                        ModifiedUtc = entity.ModifiedUtc
+                        
                     };
             }
         }

@@ -18,5 +18,8 @@ namespace Music.Models
         public DateTime ReleaseDate { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public object ModifiedUtc { get; set; }
+        public string ArtistName { get; set; }
+        public int ArtistId { get; set; }
+
     }
 }
