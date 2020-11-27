@@ -25,6 +25,8 @@ namespace Music.Services
                     Title = model.Title,
                     Genre = model.Genre,
                     ReleaseDate = model.ReleaseDate,
+                    ArtistName = model.ArtistName,
+                    ArtistID =model.ArtistId
                    // Songs = model.Songs
   
                 };
@@ -62,12 +64,13 @@ namespace Music.Services
                                                 Lyrics = b.Lyrics,
 
                                                 AlbumName=b.Album.Title
-
-
+                                                
+                                                
                                                 
                                             }).ToList(),
-                                    AlbumArtist = e.AlbumArtist
-
+                                    
+                                    ArtistName = e.Artist.ArtistName,
+                                    
                                 }
                         ) ;
 

@@ -16,6 +16,7 @@ namespace Music.Services
             var entity =
                 new AlbumArtist()
                 {
+                    
                     AlbumId = model.AlbumId,
                     ArtistId = model.ArtistId
                 };

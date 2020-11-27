@@ -30,9 +30,9 @@ namespace Music.Data
 
         public bool IsExplicit { get; set; }
         public string PlaylistName { get; set; }
-        
-       // public TimeSpan? SongLength { get; set; }
-       
+
+        // public TimeSpan? SongLength { get; set; }
+     
         //[ForeignKey(nameof(Playlist))]
         //public int PlaylistId { get; set; }
 

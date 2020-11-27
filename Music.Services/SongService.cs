@@ -20,7 +20,7 @@ namespace Music.Services
                     Title = model.Title,
                     Lyrics = model.Lyrics,
                     IsExplicit = model.IsExplicit,
-
+                    
                     AlbumName = model.AlbumName,
                     ProfileId = model.ProfileId
 

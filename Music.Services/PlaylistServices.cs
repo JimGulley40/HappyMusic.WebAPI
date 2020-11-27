@@ -91,8 +91,7 @@ namespace Music.Services
                     {
                         PlaylistId = entity.PlaylistId,
                         Playlistname = entity.PlaylistName,
-                        CreatedUtc = entity.CreatedUtc,
-                        ModifiedUtc = entity.ModifiedUtc,
+                       
                         NumberOfSongs = entity.NumberOfSongs
                     };
             }

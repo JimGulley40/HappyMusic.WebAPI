@@ -13,5 +13,7 @@ namespace Music.Models.AlbumArtistFolder
         public int AlbumArtistId {get; set;}
         public int ArtistId { get; set; }
         public int AlbumId { get; set; }
+        public string ArtistName { get; set; }
+
     }
 }
