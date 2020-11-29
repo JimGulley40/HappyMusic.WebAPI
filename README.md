@@ -41,10 +41,10 @@ Option #2 The API documentation can also bey found by running the app in visual 
 ## Resources Used
 Video used to learn how to Customize the Endpoint Documentation in Swagger https://youtu.be/tyesYzBnS4A  
 Trello board for work flow can be found here: https://trello.com/b/ZYGAmQCe/music-app-blue-badge-challenge  
-Google Dock for Data Diagram and intial planning can be found here:https://docs.google.com/spreadsheets/d/1sp65-SZqH7f_a67VP-kF2s9rJ7kDOkzDy7KSMEh8qKI/edit#gid=1800955100  
-Note the Google Doc has several tabs used in the different phases of planning  
+Google Doc for Data Diagram and initial planning can be found here:https://docs.google.com/spreadsheets/d/1sp65-SZqH7f_a67VP-kF2s9rJ7kDOkzDy7KSMEh8qKI/edit#gid=1800955100  
+Note the Google Doc has several tabs used in the different phases of planning  \
 Github Markup Language guide https://guides.github.com/features/mastering-markdown/  
-Vide to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
+Video to add photos to a ReadMe file in github https://youtu.be/nvPOUdz5PL4  
 Instructions to enable XML Comments to customize API documentation on help page https://stackoverflow.com/questions/24284413/webapi-help-page-description  
 Hex Color illustrator https://www.color-hex.com/  
 Article about using Swagger and ASP.Net Documentation https://www.c-sharpcorner.com/article/web-api-documentation-using-swagger-and-asp-net-core-with-visual-studio-2019/  
