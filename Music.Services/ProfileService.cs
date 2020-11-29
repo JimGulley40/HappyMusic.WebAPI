@@ -20,7 +20,10 @@ namespace Music.Services
                     ProfileId = model.ProfileId,
                     UserName = model.UserName,
                     StartDate = model.StartDate,
-                   
+                   MembershipLevel = model.MembershipLevel,
+                   RenewalDate = model.RenewalDate,
+                   Email = model.Email,
+                   ContactPreference = model.ContactPreference,
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -44,6 +47,10 @@ namespace Music.Services
                                     ProfileId = e.ProfileId,
                                     UserName = e.UserName,
                                     StartDate = e.StartDate,
+                                    MembershipLevel = e.MembershipLevel,
+                                    RenewalDate = e.RenewalDate,
+                                    Email = e.Email,
+                                    ContactPreference= e.ContactPreference,
                                     Songs = e.Songs.Select(
                                         b =>
                                             new SongDetail
@@ -53,8 +60,8 @@ namespace Music.Services
                                                 IsExplicit = b.IsExplicit,
                                                 Lyrics = b.Lyrics,
                                                 AlbumName = b.Album.Title
-                                            }).ToList()
-
+                                            }).ToList(),
+                                   FavoriteArtist = e.FavoriteArtist
                                     //PlaylistName =e.PlaylistId
                                 }
                         );
@@ -75,8 +82,11 @@ namespace Music.Services
                     {
                         ProfileId = entity.ProfileId,
                         UserName = entity.UserName,
-                        StartDate = entity.StartDate
-                       
+                        StartDate = entity.StartDate,
+                        MembershipLevel = entity.MembershipLevel,
+                        RenewalDate = entity.RenewalDate,
+                        Email = entity.Email,
+                        ContactPreference = entity.ContactPreference,
 
                     };
             }
@@ -92,7 +102,11 @@ namespace Music.Services
                         .Single(e => e.ProfileId == model.ProfileId);
 
                            entity.UserName = model.UserName;
-                           
+               
+                entity.MembershipLevel = model.MembershipLevel;
+                entity.RenewalDate = model.RenewalDate;
+                entity.Email = model.Email;
+                entity.ContactPreference = model.ContactPreference;
                
 
                 return ctx.SaveChanges() == 1;
