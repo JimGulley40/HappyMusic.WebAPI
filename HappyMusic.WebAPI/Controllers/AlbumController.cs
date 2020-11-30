@@ -6,45 +6,52 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace HappyMusic.WebAPI.Controllers
 {
     public class AlbumController : ApiController
     {
-        /// <summary>
-        /// Get all albums
-        /// </summary>
-        /// <returns></returns>
-        public IHttpActionResult Get()
-        {
-            AlbumService albumService = CreateAlbumService();
-            var albums = albumService.GetAlbums();
-            return Ok(albums);
-        }
-       
         private AlbumService CreateAlbumService()
         {
             //var userId = Guid.Parse(User.Identity.GetUserId());
             var albumService = new AlbumService(/*userId*/);
             return albumService;
         }
+        // private readonly HttpClient _httpClient = new HttpClient();
+        //private readonly string baseUrl = "https://localhost:44338/";
+        /// <summary>
+        /// Get all albums
+        /// </summary>
+        /// <returns></returns>
+        
+        [HttpGet]
+        public async Task<IHttpActionResult> GetAlbums()
+        {
+            var albums = await CreateAlbumService().GetAlbums();
+            return Ok(albums);
+        }
+        //public IHttpActionResult Get()
+        //{
+        //    AlbumService albumService = CreateAlbumService();
+        //    var albums = albumService.GetAlbums();
+        //    return Ok(albums);
+        //}
+       
         /// <summary>
         /// Create an album
         /// </summary>
         /// <param name="album">Pass an album name</param>
         /// <returns></returns>
-        public IHttpActionResult Post(AlbumCreate album)
+        [HttpPost]
+        public async Task<IHttpActionResult> Post(AlbumCreate album)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
+            await CreateAlbumService().CreateAlbum(album);
 
-            var service = CreateAlbumService();
-
-            if (!service.CreateAlbum(album))
-                return InternalServerError();
-
-            return Ok();
+            return Ok(album);
         }
         /// <summary>
         /// Get an album by ID

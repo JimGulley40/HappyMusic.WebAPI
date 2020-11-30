@@ -24,6 +24,7 @@ namespace Music.Data
         public DateTime ReleaseDate { get; set; }
         public virtual List<Song> Songs { get; set; } = new List<Song>();
         public List<AlbumArtist> AlbumArtist { get; set; }
+        public virtual List<Artist> Artists { get; set; } = new List<Artist>();
         //    public virtual List<Song> Songs { get; set; }
     }
 

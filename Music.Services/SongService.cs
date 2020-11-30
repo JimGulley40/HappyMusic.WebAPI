@@ -51,6 +51,7 @@ namespace Music.Services
                                     AlbumName = e.Album.Title,
                                     
                                     
+                                    
                                     //PlaylistName =e.PlaylistId
                                 }
                         );

@@ -612,7 +612,7 @@
             <param name="id"></param>
             <returns></returns>
         </member>
-        <member name="M:HappyMusic.WebAPI.Controllers.AlbumController.Get">
+        <member name="M:HappyMusic.WebAPI.Controllers.AlbumController.GetAlbums">
             <summary>
             Get all albums
             </summary>
