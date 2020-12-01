@@ -44,8 +44,8 @@ namespace HappyMusic.WebAPI.Controllers
         }
         private PlaylistServices CreatePlaylistService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var noteService = new PlaylistServices(userId);
+            //var userId = Guid.Parse(User.Identity.GetUserId());
+            var noteService = new PlaylistServices();
             return noteService;
         }
         /// <summary>

@@ -23,7 +23,7 @@ namespace Music.Data
 
         [Required]
         public DateTime ReleaseDate { get; set; }
-        public string ArtistName { get; set; }
+        
         public virtual List<Song> Songs { get; set; } = new List<Song>();
         public List<AlbumArtist> AlbumArtist { get; set; }
         

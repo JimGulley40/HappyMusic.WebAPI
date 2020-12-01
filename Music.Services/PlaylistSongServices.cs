@@ -12,18 +12,18 @@ namespace Music.Services
 
     public class PlaylistSongServices
     {
-        private readonly Guid _userId;
+        //private readonly Guid _userId;
 
-        public PlaylistSongServices(Guid userId)
-        {
-            _userId = userId;
-        }
+        //public PlaylistSongServices(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreatePlaylistSong(PlaylistSongCreate model)
         {
             var entity =
                 new PlaylistSong()
                 {
-                    PlaylistOwnerId = _userId,
+                   // PlaylistOwnerId = _userId,
                     SongId = model.SongId,
                     PlaylistId = model.PlaylistId,
                     Title = model.Title
@@ -47,7 +47,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .PlaylistSong
-                        .Where(e => e.PlaylistOwnerId == _userId)
+                       // .Where(e => e.PlaylistOwnerId == _userId)
                         .Select(
                             e =>
                                 new PlaylistSongListItem
@@ -70,7 +70,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .PlaylistSong
-                        .Single(e => e.PlaylistSongId == id && e.PlaylistOwnerId == _userId);
+                        .Single(e => e.PlaylistSongId == id /* && e.PlaylistOwnerId == _userId*/);
                 return
                     new PlaylistSongDetail
                     {
@@ -89,7 +89,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .PlaylistSong
-                        .Single(e => e.PlaylistSongId == noteId && e.PlaylistOwnerId == _userId);
+                        .Single(e => e.PlaylistSongId == noteId /*&& e.PlaylistOwnerId == _userId*/);
 
                 ctx.PlaylistSong.Remove(entity);
 
