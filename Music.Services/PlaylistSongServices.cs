@@ -46,14 +46,14 @@ namespace Music.Services
             {
                 var query =
                     ctx
-                        .PlaylistSong
+                        .Songs
                        // .Where(e => e.PlaylistOwnerId == _userId)
                         .Select(
                             e =>
                                 new PlaylistSongListItem
                                 {
-                                    PlaylistId = e.PlaylistId,
-                                    PlaylistSongId = e.PlaylistSongId,
+                                   // PlaylistId = e.PlaylistId,
+                                   // PlaylistSongId = e.PlaylistSongId,
                                     SongId =e.SongId,
                                     Title = e.Title,
                                    // Songs=e.Song

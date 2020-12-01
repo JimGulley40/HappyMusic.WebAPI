@@ -87,6 +87,7 @@
     <Compile Include="Album.cs" />
     <Compile Include="AlbumArtist.cs" />
     <Compile Include="Artist.cs" />
+    <Compile Include="FavoriteArtist.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Profile.cs" />

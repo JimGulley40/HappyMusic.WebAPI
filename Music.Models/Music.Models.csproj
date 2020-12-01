@@ -66,6 +66,9 @@
     <Compile Include="ArtistFolder\ArtistDetail.cs" />
     <Compile Include="ArtistFolder\ArtistEdit.cs" />
     <Compile Include="ArtistFolder\ArtistListItem.cs" />
+    <Compile Include="FavoriteArtist\FavoriteArtistCreate.cs" />
+    <Compile Include="FavoriteArtist\FavoriteArtistDetail.cs" />
+    <Compile Include="FavoriteArtist\FavoriteArtistListItem.cs" />
     <Compile Include="PlaylistFolder\PlaylistCreate.cs" />
     <Compile Include="PlaylistFolder\PlaylistDetail.cs" />
     <Compile Include="PlaylistFolder\PlaylistEdit.cs" />

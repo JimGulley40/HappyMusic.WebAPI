@@ -21,7 +21,7 @@ namespace Music.Data
         [Required]
         public int SongId { get; set; }
        
-        public Guid PlaylistOwnerId { get; set; }
+        
         public string Title { get; set; }
       
         
