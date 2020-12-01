@@ -12,7 +12,7 @@ namespace Music.Models
         public string Title { get; set; }
         
         public string AlbumName { get; set; }
- 
+        public string Artist { get; set; }
 
     }
 }

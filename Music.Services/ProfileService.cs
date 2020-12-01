@@ -59,7 +59,8 @@ namespace Music.Services
                                                 Title = b.Title,
                                                 IsExplicit = b.IsExplicit,
                                                 Lyrics = b.Lyrics,
-                                                AlbumName = b.Album.Title
+                                                AlbumName = b.Album.Title,
+                                                ArtistName= b.Album.Artist.ArtistName
                                             }).ToList(),
                                    FavoriteArtist = e.FavoriteArtist
                                     //PlaylistName =e.PlaylistId

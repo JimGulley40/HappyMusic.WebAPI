@@ -56,7 +56,7 @@ namespace Music.Services
                                     SongId = e.SongId,
                                     Title = e.Title,
                                     AlbumName = e.Album.Title,
-                                    
+                                    Artist = e.Album.Artist.ArtistName
                                     
                                     //PlaylistName =e.PlaylistId
                                 }

@@ -11,18 +11,18 @@ namespace Music.Services
    
     public class PlaylistServices
     {
-        private readonly Guid _userId;
+        //private readonly Guid _userId;
 
-        public PlaylistServices(Guid userId)
-        {
-            _userId = userId;
-        }
+        //public PlaylistServices(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreatePlaylist(PlaylistCreate model)
         {
             var entity =
                 new Playlist()
                 {
-                    OwnerId = _userId,
+                   // OwnerId = _userId,
                     SongId = model.SongId,
                     PlaylistName = model.PlaylistName,
                     CreatedUtc = DateTimeOffset.Now,
@@ -43,7 +43,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Playlist
-                        .Single(e => e.PlaylistId == model.PlaylistId && e.OwnerId == _userId);
+                        .Single(e => e.PlaylistId == model.PlaylistId /*&& e.OwnerId == _userId*/);
                 entity.PlaylistName = model.PlaylistName;
                 entity.PlaylistId = model.PlaylistId;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
@@ -60,7 +60,7 @@ namespace Music.Services
                 var query =
                     ctx
                         .Playlist
-                        .Where(e => e.OwnerId == _userId)
+                        //.Where(e => e.OwnerId == _userId)
                         .Select(
                             e =>
                                 new PlaylistListItem
@@ -87,7 +87,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Playlist
-                        .Single(e => e.PlaylistId == id && e.OwnerId == _userId);
+                        .Single(e => e.PlaylistId == id /* && e.OwnerId == _userId*/);
                 return
                     new PlaylistDetail
                     {
@@ -106,7 +106,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Playlist
-                        .Single(e => e.PlaylistId == playlistId && e.OwnerId == _userId);
+                        .Single(e => e.PlaylistId == playlistId /*&& e.OwnerId == _userId*/);
 
                 ctx.Playlist.Remove(entity);
 
