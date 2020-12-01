@@ -52,7 +52,7 @@ namespace Music.Services
                                 {
                                     AlbumId = e.AlbumId,
                                     Title = e.Title,
-                                    Genre = e.Genre,
+                                    Genre = e.Genre.ToString(),
                                     ReleaseDate = e.ReleaseDate,
                                     Songs = e.Songs.Select(
                                         b =>

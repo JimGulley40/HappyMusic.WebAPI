@@ -17,7 +17,8 @@ namespace Music.Services
                 {
                    ProfileId=model.ProfileId,
                    ArtistId = model.ArtistId,
-                    FavoriteArtistId=model.FavoriteArtistId
+                    FavoriteArtistId=model.FavoriteArtistId,
+                    ArtistName=model.ArtistName
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -32,17 +33,17 @@ namespace Music.Services
             {
                 var query =
                     ctx
-                        .FavoriteArtist
+                        .Artists
                         
 
                         .Select(
                             e =>
                                 new FavoriteArtistListItem
                                 {
-                                   FavoriteArtistId=e.FavoriteArtistId,
+                                  
                                    ArtistId = e.ArtistId,
-                                   ProfileId =e.ProfileId
-
+                                   
+                                   ArtistName = e.ArtistName
                                     
                                 }
                         );

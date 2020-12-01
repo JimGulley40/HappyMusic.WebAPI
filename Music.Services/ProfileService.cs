@@ -24,6 +24,7 @@ namespace Music.Services
                    RenewalDate = model.RenewalDate,
                    Email = model.Email,
                    ContactPreference = model.ContactPreference,
+                   FavoriteArtist = model.FavoriteArtist
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -62,8 +63,10 @@ namespace Music.Services
                                                 AlbumName = b.Album.Title,
                                                 ArtistName= b.Album.Artist.ArtistName
                                             }).ToList(),
-                                   FavoriteArtist = e.FavoriteArtist
-                                  
+                                   FavoriteArtist = e.FavoriteArtist.ArtistName,
+                                       
+
+
 
 
                                 }
