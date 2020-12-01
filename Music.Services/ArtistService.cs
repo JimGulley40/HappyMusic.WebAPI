@@ -24,7 +24,7 @@ namespace Music.Services
                     //OwnerId = _userId,
                     ArtistName = model.ArtistName,
                     CreatedUtc = DateTimeOffset.Now,
-                    IsFavoriteArtist=model.IsFavoriteArtist
+                    //IsFavoriteArtist=model.IsFavoriteArtist
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -48,7 +48,7 @@ namespace Music.Services
                                     ArtistId = e.ArtistId,
                                     ArtistName = e.ArtistName,
                                     CreatedUtc = e.CreatedUtc,
-                                    IsFavoriteArtist = e.IsFavoriteArtist
+                                    //IsFavoriteArtist = e.IsFavoriteArtist
                                 }
                         );
 
@@ -71,7 +71,7 @@ namespace Music.Services
                         ArtistName = entity.ArtistName,
                         CreatedUtc = DateTimeOffset.Now,
                         ModifiedUtc = entity.ModifiedUtc,
-                        IsFavoriteArtist = entity.IsFavoriteArtist
+                       // IsFavoriteArtist = entity.IsFavoriteArtist
                     };
             }
 
@@ -87,7 +87,7 @@ namespace Music.Services
                 //entity.ArtistId = model.ArtistId;
                 entity.ArtistName = model.ArtistName;
                 entity.ModifiedUtc = DateTimeOffset.UtcNow;
-                entity.IsFavoriteArtist = model.IsFavoriteArtist;
+               // entity.IsFavoriteArtist = model.IsFavoriteArtist;
 
                 return ctx.SaveChanges() == 1;
             }
