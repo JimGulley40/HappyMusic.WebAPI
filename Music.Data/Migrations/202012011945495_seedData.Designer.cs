@@ -7,13 +7,13 @@ namespace Music.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class AddedForeignKeyToAlbumArtistTable : IMigrationMetadata
+    public sealed partial class seedData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedForeignKeyToAlbumArtistTable));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(seedData));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011232104140_AddedForeignKeyToAlbumArtistTable"; }
+            get { return "202012011945495_seedData"; }
         }
         
         string IMigrationMetadata.Source

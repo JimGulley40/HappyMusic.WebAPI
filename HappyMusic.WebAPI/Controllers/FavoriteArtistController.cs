@@ -11,6 +11,10 @@ namespace HappyMusic.WebAPI.Controllers
 {
     public class FavoriteArtistController : ApiController
     {
+        /// <summary>
+        /// Get all Favorite Artists
+        /// </summary>
+        /// <returns></returns>
         public IHttpActionResult Get()
         {
             FavoriteArtistService favoriteArtistService = CreateFavoriteArtistService();
@@ -18,7 +22,11 @@ namespace HappyMusic.WebAPI.Controllers
             return Ok(artist);
         }
 
-      
+      /// <summary>
+      /// Create a Favorite Artist
+      /// </summary>
+      /// <param name="favoriteArtist">Pass a favoriteArtistName</param>
+      /// <returns></returns>
         public IHttpActionResult Post(FavoriteArtistCreate favoriteArtist)
         {
             if (!ModelState.IsValid)
@@ -37,7 +45,11 @@ namespace HappyMusic.WebAPI.Controllers
             var Service = new FavoriteArtistService();
             return Service;
         }
-       
+       /// <summary>
+       /// Get a favorite artist by ID
+       /// </summary>
+       /// <param name="id">Pass a favoriteArtistID</param>
+       /// <returns></returns>
         public IHttpActionResult Get(int id)
         {
             FavoriteArtistService favoriteArtistService = CreateFavoriteArtistService();
