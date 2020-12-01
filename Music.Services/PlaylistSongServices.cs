@@ -26,7 +26,7 @@ namespace Music.Services
                     PlaylistOwnerId = _userId,
                     SongId = model.SongId,
                     PlaylistId = model.PlaylistId,
-                   
+                    Title = model.Title
 
 
                 };
@@ -54,8 +54,9 @@ namespace Music.Services
                                 {
                                     PlaylistId = e.PlaylistId,
                                     PlaylistSongId = e.PlaylistSongId,
-                                    SongId =e.SongId
-
+                                    SongId =e.SongId,
+                                    Title = e.Title,
+                                   // Songs=e.Song
                                 }
                         );
 
@@ -76,7 +77,7 @@ namespace Music.Services
                         PlaylistId = entity.PlaylistId,
                         PlaylistSongId = entity.PlaylistSongId,
                         SongId = entity.SongId,
-                        
+                        Title= entity.Title
                     };
             }
         }

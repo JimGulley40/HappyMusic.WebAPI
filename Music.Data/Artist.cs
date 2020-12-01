@@ -16,5 +16,6 @@ namespace Music.Data
         public Guid OwnerId { get; set; }
         public DateTimeOffset CreatedUtc { get; set; }
         public object ModifiedUtc { get; set; }
+        public bool IsFavoriteArtist { get; set; }
     }
 }

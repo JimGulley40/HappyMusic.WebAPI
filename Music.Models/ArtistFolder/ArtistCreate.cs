@@ -13,6 +13,8 @@ namespace Music.Models
         [Key]
         public int ArtistId { get; set; }
         public string ArtistName { get; set; }
-   
+        public bool IsFavoriteArtist { get; set; }
+
+
     }
 }

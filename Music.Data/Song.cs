@@ -14,6 +14,7 @@ namespace Music.Data
         public int SongId { get; set; }
         [Required]
         public string Title { get; set; }
+        //public Guid SongOwnerId { get; set; }
 
         public string AlbumName {get;set;}
         [ForeignKey(nameof(Album))]

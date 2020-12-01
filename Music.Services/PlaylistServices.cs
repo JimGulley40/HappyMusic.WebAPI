@@ -25,8 +25,8 @@ namespace Music.Services
                     OwnerId = _userId,
                     SongId = model.SongId,
                     PlaylistName = model.PlaylistName,
-                    CreatedUtc = DateTimeOffset.Now
-
+                    CreatedUtc = DateTimeOffset.Now,
+                    
 
                 };
 
@@ -70,7 +70,9 @@ namespace Music.Services
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc,
                                     NumberOfSongs=e.PlaylistSong.Count,
-                                    Songs=e.PlaylistSong
+                                    
+                                    Songs = e.PlaylistSong
+
 
                                 }
                         );

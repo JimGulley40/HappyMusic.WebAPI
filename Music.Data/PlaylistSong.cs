@@ -23,9 +23,7 @@ namespace Music.Data
        
         public Guid PlaylistOwnerId { get; set; }
         public string Title { get; set; }
-        public bool IsExplicit { get; set; }
-        public string Lyrics { get; set; }
-        public string AlbumName { get; set; }
+      
         
 
     }
