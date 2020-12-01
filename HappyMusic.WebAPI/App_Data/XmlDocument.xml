@@ -646,6 +646,26 @@
             <param name="id">Pass an album ID</param>
             <returns></returns>
         </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.FavoriteArtistController.Get">
+            <summary>
+            Get all Favorite Artists
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.FavoriteArtistController.Post(Music.Models.FavoriteArtistCreate)">
+            <summary>
+            Create a Favorite Artist
+            </summary>
+            <param name="favoriteArtist">Pass a favoriteArtistName</param>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.FavoriteArtistController.Get(System.Int32)">
+            <summary>
+            Get a favorite artist by ID
+            </summary>
+            <param name="id">Pass a favoriteArtistID</param>
+            <returns></returns>
+        </member>
         <member name="M:HappyMusic.WebAPI.Controllers.PlaylistController.Get">
             <summary>
             Get a list of playlists
@@ -705,6 +725,40 @@
             Delete Playlist song by ID
             </summary>
             <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.ProfileController.Get">
+            <summary>
+            Get all Profiles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.ProfileController.Post(Music.Models.ProfileFolder.ProfileCreate)">
+            <summary>
+            Create A Profile
+            </summary>
+            <param name="profile">Pass a Name for the profile</param>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.ProfileController.Get(System.Int32)">
+            <summary>
+            Get a profile by ID
+            </summary>
+            <param name="id">Pass a profileID</param>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.ProfileController.Put(Music.Models.ProfileFolder.ProfileEdit)">
+            <summary>
+            Edit a profile by ID
+            </summary>
+            <param name="profile">Pass a profile name</param>
+            <returns></returns>
+        </member>
+        <member name="M:HappyMusic.WebAPI.Controllers.ProfileController.Delete(System.Int32)">
+            <summary>
+            Delete profile by ID
+            </summary>
+            <param name="id">Pass a profileID</param>
             <returns></returns>
         </member>
         <member name="M:HappyMusic.WebAPI.Controllers.SongController.Get">

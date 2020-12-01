@@ -11,6 +11,10 @@ namespace HappyMusic.WebAPI.Controllers
 {
     public class ProfileController : ApiController
     {
+        /// <summary>
+        /// Get all Profiles
+        /// </summary>
+        /// <returns></returns>
         public IHttpActionResult Get()
         {
             ProfileService profileService = CreateProfileService();
@@ -24,6 +28,11 @@ namespace HappyMusic.WebAPI.Controllers
             var profileService = new ProfileService();
             return profileService;
         }
+        /// <summary>
+        /// Create A Profile
+        /// </summary>
+        /// <param name="profile">Pass a Name for the profile</param>
+        /// <returns></returns>
         public IHttpActionResult Post(ProfileCreate profile)
         {
             if (!ModelState.IsValid)
@@ -36,13 +45,22 @@ namespace HappyMusic.WebAPI.Controllers
 
             return Ok();
         }
-
+        /// <summary>
+        /// Get a profile by ID
+        /// </summary>
+        /// <param name="id">Pass a profileID</param>
+        /// <returns></returns>
         public IHttpActionResult Get(int id)
         {
             ProfileService profileService = CreateProfileService();
             var profile = profileService.GetProfileById(id);
             return Ok(profile);
         }
+        /// <summary>
+        /// Edit a profile by ID
+        /// </summary>
+        /// <param name="profile">Pass a profile name</param>
+        /// <returns></returns>
         public IHttpActionResult Put(ProfileEdit profile)
         {
             if (!ModelState.IsValid)
@@ -55,6 +73,11 @@ namespace HappyMusic.WebAPI.Controllers
 
             return Ok();
         }
+        /// <summary>
+        /// Delete profile by ID
+        /// </summary>
+        /// <param name="id">Pass a profileID</param>
+        /// <returns></returns>
         public IHttpActionResult Delete(int id)
         {
             var service = CreateProfileService();
