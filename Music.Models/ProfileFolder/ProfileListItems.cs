@@ -17,6 +17,6 @@ namespace Music.Models.ProfileFolder
         public DateTime RenewalDate { get; set; }
         public string Email { get; set; }
         public ContactPreference ContactPreference { get; set; }
-        public List<Artist> FavoriteArtist { get; set; }
+        public List<FavoriteArtist> FavoriteArtist { get; set; } = new List<FavoriteArtist>();
     }
 }

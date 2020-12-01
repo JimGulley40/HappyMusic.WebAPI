@@ -70,12 +70,34 @@ namespace Music.Services
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc,
                                     NumberOfSongs=e.PlaylistSong.Count,
-                                    
                                     Songs = e.PlaylistSong
+                                    //Songs = e.PlaylistSong.Select(
+                                    //    b =>
+                                    //        new PlaylistSong
+                                    //        {
+                                    //            SongId = b.SongId,
+                                    //            Title = b.Title
+
+                                    //        }).ToList(),
 
 
                                 }
                         );
+                var quer =
+                   ctx
+                       .Songs
+                       // .Where(e => e.PlaylistOwnerId == _userId)
+                       .Select(
+                           e =>
+                               new PlaylistSongListItem
+                               {
+                                    // PlaylistId = e.PlaylistId,
+                                    // PlaylistSongId = e.PlaylistSongId,
+                                    SongId = e.SongId,
+                                   Title = e.Title,
+                                    // Songs=e.Song
+                                }
+                       );
 
                 return query.ToArray();
             }

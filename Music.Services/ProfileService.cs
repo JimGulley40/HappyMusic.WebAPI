@@ -63,7 +63,9 @@ namespace Music.Services
                                                 ArtistName= b.Album.Artist.ArtistName
                                             }).ToList(),
                                    FavoriteArtist = e.FavoriteArtist
-                                    //PlaylistName =e.PlaylistId
+                                  
+
+
                                 }
                         );
 
