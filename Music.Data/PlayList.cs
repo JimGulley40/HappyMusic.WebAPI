@@ -35,6 +35,7 @@ namespace Music.Data
         public DateTimeOffset? ModifiedUtc { get; set; }
 
         public virtual List<PlaylistSong> PlaylistSong { get; set; }
-        
+        //public virtual List<Song> Song { get; set; }
+
     }
 }

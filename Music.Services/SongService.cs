@@ -9,12 +9,18 @@ namespace Music.Services
 
     public class SongService
     {
-                
+        //private readonly Guid _userId;
+
+        //public SongService(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreateSong(SongCreate model)
         {
             var entity =
                 new Song()
                 {
+                    //SongOwnerId = _userId,
 
                     AlbumID = model.AlbumID,
                     Title = model.Title,
@@ -41,7 +47,8 @@ namespace Music.Services
                 var query =
                     ctx
                         .Songs
-                        
+                        //.Where(e => e.SongOwnerId == _userId)
+
                         .Select(
                             e =>
                                 new SongListItem
@@ -65,7 +72,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == id);
+                        .Single(e => e.SongId == id );
                 return
                     new SongDetail
                     {
@@ -89,7 +96,7 @@ namespace Music.Services
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == model.SongId);
+                        .Single(e => e.SongId == model.SongId );
 
                 entity.Title = model.Title;
                 entity.AlbumID = model.AlbumId;

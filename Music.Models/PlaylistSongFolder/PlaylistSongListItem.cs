@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Music.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Music.Models
        public int PlaylistId { get; set; }
         
        public int SongId { get; set; }
+       public string Title { get; set; }
+       // public List<Song> Songs { get; set; } = new List<Song>();
 
     }
 }
