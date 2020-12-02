@@ -7,13 +7,13 @@ namespace Music.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class seedData : IMigrationMetadata
+    public sealed partial class AddedArtistListToFavArtist : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(seedData));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddedArtistListToFavArtist));
         
         string IMigrationMetadata.Id
         {
-            get { return "202012011945495_seedData"; }
+            get { return "202012021618302_AddedArtistListToFavArtist"; }
         }
         
         string IMigrationMetadata.Source

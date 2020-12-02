@@ -89,9 +89,29 @@
     <Compile Include="Artist.cs" />
     <Compile Include="FavoriteArtist.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012011945495_seedData.cs" />
-    <Compile Include="Migrations\202012011945495_seedData.Designer.cs">
-      <DependentUpon>202012011945495_seedData.cs</DependentUpon>
+    <Compile Include="Migrations\202012021346377_switchedArtistName.cs" />
+    <Compile Include="Migrations\202012021346377_switchedArtistName.Designer.cs">
+      <DependentUpon>202012021346377_switchedArtistName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021428176_changeditup.cs" />
+    <Compile Include="Migrations\202012021428176_changeditup.Designer.cs">
+      <DependentUpon>202012021428176_changeditup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021455041_HereWeGoAgain.cs" />
+    <Compile Include="Migrations\202012021455041_HereWeGoAgain.Designer.cs">
+      <DependentUpon>202012021455041_HereWeGoAgain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021545088_goingbacktothebeginning.cs" />
+    <Compile Include="Migrations\202012021545088_goingbacktothebeginning.Designer.cs">
+      <DependentUpon>202012021545088_goingbacktothebeginning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021602192_ChangingFavArtists.cs" />
+    <Compile Include="Migrations\202012021602192_ChangingFavArtists.Designer.cs">
+      <DependentUpon>202012021602192_ChangingFavArtists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021618302_AddedArtistListToFavArtist.cs" />
+    <Compile Include="Migrations\202012021618302_AddedArtistListToFavArtist.Designer.cs">
+      <DependentUpon>202012021618302_AddedArtistListToFavArtist.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlaylistSong.cs" />
@@ -109,8 +129,23 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012011945495_seedData.resx">
-      <DependentUpon>202012011945495_seedData.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012021346377_switchedArtistName.resx">
+      <DependentUpon>202012021346377_switchedArtistName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021428176_changeditup.resx">
+      <DependentUpon>202012021428176_changeditup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021455041_HereWeGoAgain.resx">
+      <DependentUpon>202012021455041_HereWeGoAgain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021545088_goingbacktothebeginning.resx">
+      <DependentUpon>202012021545088_goingbacktothebeginning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021602192_ChangingFavArtists.resx">
+      <DependentUpon>202012021602192_ChangingFavArtists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021618302_AddedArtistListToFavArtist.resx">
+      <DependentUpon>202012021618302_AddedArtistListToFavArtist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

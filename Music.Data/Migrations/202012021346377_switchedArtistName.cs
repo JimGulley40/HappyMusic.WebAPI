@@ -3,7 +3,7 @@ namespace Music.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class seedData : DbMigration
+    public partial class switchedArtistName : DbMigration
     {
         public override void Up()
         {
@@ -41,7 +41,6 @@ namespace Music.Data.Migrations
                         ArtistName = c.String(nullable: false),
                         OwnerId = c.Guid(nullable: false),
                         CreatedUtc = c.DateTimeOffset(nullable: false, precision: 7),
-                        IsFavoriteArtist = c.Boolean(nullable: false),
                     })
                 .PrimaryKey(t => t.ArtistId);
             

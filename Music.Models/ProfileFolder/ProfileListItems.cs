@@ -17,8 +17,8 @@ namespace Music.Models.ProfileFolder
         public DateTime RenewalDate { get; set; }
         public string Email { get; set; }
         public ContactPreference ContactPreference { get; set; }
-        // public virtual List<FavoriteArtist> FavoriteArtist { get; set; } = new List<FavoriteArtist>();
-        public string FavoriteArtist { get; set; }
+        public List<ArtistListItem> FavoriteArtists { get; set; }/* = new List<FavoriteArtist>();*/
+       //public string FavoriteArtist { get; set; }
 
     }
 }
