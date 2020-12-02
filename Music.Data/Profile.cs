@@ -22,7 +22,7 @@ namespace Music.Data
         public string Email { get; set; }
         public ContactPreference ContactPreference { get; set; }
         
-       // public virtual List<FavoriteArtist> FavoriteArtist { get; set; } = new List<FavoriteArtist>();
-       public Artist FavoriteArtist { get; set; }
-    }
+        public virtual List<Artist> Artist { get; set; } = new List<Artist>();
+        //public Artist FavoriteArtist { get; set; }
+        public Guid OwnerId { get; set; }
 }

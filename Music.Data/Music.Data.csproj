@@ -89,9 +89,13 @@
     <Compile Include="Artist.cs" />
     <Compile Include="FavoriteArtist.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202012011945495_seedData.cs" />
-    <Compile Include="Migrations\202012011945495_seedData.Designer.cs">
-      <DependentUpon>202012011945495_seedData.cs</DependentUpon>
+    <Compile Include="Migrations\202012021346377_switchedArtistName.cs" />
+    <Compile Include="Migrations\202012021346377_switchedArtistName.Designer.cs">
+      <DependentUpon>202012021346377_switchedArtistName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021428176_changeditup.cs" />
+    <Compile Include="Migrations\202012021428176_changeditup.Designer.cs">
+      <DependentUpon>202012021428176_changeditup.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlaylistSong.cs" />
@@ -109,8 +113,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202012011945495_seedData.resx">
-      <DependentUpon>202012011945495_seedData.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202012021346377_switchedArtistName.resx">
+      <DependentUpon>202012021346377_switchedArtistName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021428176_changeditup.resx">
+      <DependentUpon>202012021428176_changeditup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

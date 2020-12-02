@@ -11,6 +11,11 @@ namespace Music.Services
 {
     public class ProfileService
     {
+        private readonly Guid _userId;
+        public ProfileService(Guid userId)
+        {
+            _userId = userId;
+        }
         public bool CreateProfile(ProfileCreate model)
         {
             var entity =
@@ -24,7 +29,7 @@ namespace Music.Services
                    RenewalDate = model.RenewalDate,
                    Email = model.Email,
                    ContactPreference = model.ContactPreference,
-                   FavoriteArtist = model.FavoriteArtist
+                   //FavoriteArtist = model.FavoriteArtist
                 };
 
             using (var ctx = new ApplicationDbContext())
@@ -51,7 +56,7 @@ namespace Music.Services
                                     MembershipLevel = e.MembershipLevel,
                                     RenewalDate = e.RenewalDate,
                                     Email = e.Email,
-                                    ContactPreference= e.ContactPreference,
+                                    ContactPreference = e.ContactPreference,
                                     Songs = e.Songs.Select(
                                         b =>
                                             new SongDetail
@@ -61,16 +66,25 @@ namespace Music.Services
                                                 IsExplicit = b.IsExplicit,
                                                 Lyrics = b.Lyrics,
                                                 AlbumName = b.Album.Title,
-                                                ArtistName= b.Album.Artist.ArtistName
+                                                ArtistName = b.Album.Artist.ArtistName
                                             }).ToList(),
-                                   FavoriteArtist = e.FavoriteArtist.ArtistName,
-                                       
+                                    Artists = 
+                                    e
+                                    .Artist
+                                    .Where(n => n.OwnerId == _userId)
+                                    .Select(
+                                        b =>
+                                        new ArtistDetail
+                                        {
+                                            ArtistName = b.ArtistName,
+                                        }).ToList(),
+
 
 
 
 
                                 }
-                        );
+                        ) ;
 
                 return query.ToArray();
             }

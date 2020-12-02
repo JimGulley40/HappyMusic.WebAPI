@@ -10,7 +10,6 @@ namespace Music.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "Music.Data.ApplicationDbContext";
         }
 
         protected override void Seed(Music.Data.ApplicationDbContext context)
@@ -20,22 +19,12 @@ namespace Music.Data.Migrations
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
             //
-                context.Artists.AddOrUpdate(
-                  p => p.ArtistName,
-                new Artist  { ArtistName = "Ashley Bain"},
-                new Artist  { ArtistName = "Jim Gulley" },
-                new Artist  { ArtistName = "Yazid Louda" }
-                );
-           // context.Songs.AddOrUpdate(
-           //      p => p.Title,
-            //   new Song { Title = "Ashley's Tune" },
-            //   new Song { Title = "Jim's Tune" },
-            //   new Song { Title = "Yazid's Tune" }
-           //    );
-
-
-
-
+            //    context.People.AddOrUpdate(
+            //      p => p.FullName,
+            //      new Person { FullName = "Andrew Peters" },
+            //      new Person { FullName = "Brice Lambson" },
+            //      new Person { FullName = "Rowan Miller" }
+            //    );
             //
         }
     }

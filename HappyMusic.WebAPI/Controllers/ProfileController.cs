@@ -1,4 +1,5 @@
-﻿using Music.Models.ProfileFolder;
+﻿using Microsoft.AspNet.Identity;
+using Music.Models.ProfileFolder;
 using Music.Services;
 using System;
 using System.Collections.Generic;
@@ -24,8 +25,8 @@ namespace HappyMusic.WebAPI.Controllers
 
         private ProfileService CreateProfileService()
         {
-
-            var profileService = new ProfileService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var profileService = new ProfileService(userId);
             return profileService;
         }
         /// <summary>
