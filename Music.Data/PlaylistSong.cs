@@ -23,8 +23,9 @@ namespace Music.Data
        
         
         public string Title { get; set; }
-      
-        
+        public virtual Song Song { get; set; }
+
+
 
     }
 }

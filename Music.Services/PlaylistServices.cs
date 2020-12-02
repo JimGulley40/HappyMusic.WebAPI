@@ -70,15 +70,15 @@ namespace Music.Services
                                     Playlistname = e.PlaylistName,
                                     CreatedUtc = e.CreatedUtc,
                                     NumberOfSongs=e.PlaylistSong.Count,
-                                    Songs = e.PlaylistSong
-                                    //Songs = e.PlaylistSong.Select(
-                                    //    b =>
-                                    //        new PlaylistSong
-                                    //        {
-                                    //            SongId = b.SongId,
-                                    //            Title = b.Title
+                                    PlaylistSongs = e.PlaylistSong
+                                    .Select(
+                                       b =>
+                                            new PlaylistSongListItem
+                                            {
+                                                SongId=b.Song.SongId,
+                                                Title=b.Song.Title
 
-                                    //        }).ToList(),
+                                            }).ToList(),
 
 
                                 }

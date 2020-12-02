@@ -56,7 +56,7 @@ namespace Music.Services
                                     MembershipLevel = e.MembershipLevel,
                                     RenewalDate = e.RenewalDate,
                                     Email = e.Email,
-                                    ContactPreference = e.ContactPreference,
+                                    ContactPreference = e.ContactPreference.ToString(),
                                     Songs = e.Songs.Select(
                                         b =>
                                             new SongDetail
