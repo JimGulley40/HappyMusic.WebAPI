@@ -10,7 +10,7 @@ using System.Web.Http;
 
 namespace HappyMusic.WebAPI.Controllers
 {
-    
+    [Authorize]
     public class ArtistController : ApiController
     {
         /// <summary>

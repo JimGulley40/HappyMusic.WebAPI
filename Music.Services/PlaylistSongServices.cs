@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Music.Services
 {
-
+    //This is our PlaylistSong Joiner service, it joins playlist and songs together to show a list of 
+    //songs in a playlist. 
     public class PlaylistSongServices
     {
         //private readonly Guid _userId;
@@ -18,6 +19,8 @@ namespace Music.Services
         //{
         //    _userId = userId;
         //}
+
+        //Create Method in CRUD
         public bool CreatePlaylistSong(PlaylistSongCreate model)
         {
             var entity =
@@ -39,7 +42,7 @@ namespace Music.Services
         }
        
 
-
+        //Read method in crud by list item. This shows the playlistSong's title and SongID in the request
         public IEnumerable<PlaylistSongListItem> GetPlayListSongs()
         {
             using (var ctx = new ApplicationDbContext())
@@ -62,7 +65,7 @@ namespace Music.Services
 
                 return query.ToArray();
             }
-        }
+        }//Read method in CRUD by id
         public PlaylistSongDetail GetPlaylistSongById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -81,7 +84,7 @@ namespace Music.Services
                     };
             }
         }
-
+        //Delete Method in crud by the ID. If the id put into postman doesn't match the id found in the database, it will not delete the item. 
         public bool DeletePlaylistSong(int noteId)
         {
             using (var ctx = new ApplicationDbContext())
