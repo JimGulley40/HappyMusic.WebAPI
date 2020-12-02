@@ -8,7 +8,8 @@ using Music.Models;
 
 namespace Music.Services
 {
-   
+   //this is the Playlist Service, includes all the CRUD methods that are used in the controller
+   //level.
     public class PlaylistServices
     {
         //private readonly Guid _userId;
@@ -17,6 +18,10 @@ namespace Music.Services
         //{
         //    _userId = userId;
         //}
+
+
+        //Create Method for CRUD. Takes information put into postman/api and puts it into the format of a playlist
+
         public bool CreatePlaylist(PlaylistCreate model)
         {
             var entity =
@@ -36,6 +41,9 @@ namespace Music.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        //Update part of CRUD for playlist. Updates the playlist that matches with the input/playlist number put into 
+        //postman. Takes all of the old items and turns them into the new updated ones
         public bool UpdatePlaylist(PlaylistEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -52,7 +60,8 @@ namespace Music.Services
             }
         }
 
-
+        //Read part of crud. This playlist list item references another table of playlist songs, it reads the songs from the playlist song
+        //list item and shows the number of songs with their names on the playlist
         public IEnumerable<PlaylistListItem> GetPlayLists()
         {
             using (var ctx = new ApplicationDbContext())
@@ -102,6 +111,8 @@ namespace Music.Services
                 return query.ToArray();
             }
         }
+
+        //Read method by id
         public PlaylistDetail GetPlaylistById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -121,6 +132,8 @@ namespace Music.Services
             }
         }
 
+
+        //Delete method of CRUD. Only deletes the playlist ID that matches with the one put into postman
         public bool DeletePlaylist(int playlistId)
         {
             using (var ctx = new ApplicationDbContext())

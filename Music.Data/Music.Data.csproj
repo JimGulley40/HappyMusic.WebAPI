@@ -89,6 +89,15 @@
     <Compile Include="Artist.cs" />
     <Compile Include="FavoriteArtist.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202012021811329_firstmigrationRefactoringDatabase.cs" />
+    <Compile Include="Migrations\202012021811329_firstmigrationRefactoringDatabase.Designer.cs">
+      <DependentUpon>202012021811329_firstmigrationRefactoringDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012021830556_first.cs" />
+    <Compile Include="Migrations\202012021830556_first.Designer.cs">
+      <DependentUpon>202012021830556_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PlaylistSong.cs" />
     <Compile Include="Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -102,6 +111,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202012021811329_firstmigrationRefactoringDatabase.resx">
+      <DependentUpon>202012021811329_firstmigrationRefactoringDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012021830556_first.resx">
+      <DependentUpon>202012021830556_first.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace HappyMusic.WebAPI.Controllers
 {
+    [Authorize]
     public class FavoriteArtistController : ApiController
     {
         /// <summary>

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Music.Services
 {
-
+    //This is our service class to complete CRUD methods for album
 
     public class AlbumService
     {
@@ -16,6 +16,9 @@ namespace Music.Services
         //{
         //    _userId = userId;
         //}
+
+
+        //Create for CRUD, takes items in CreateModel to make a new album
         public bool CreateAlbum(AlbumCreate model)
         {
             var entity =
@@ -37,6 +40,11 @@ namespace Music.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        //Read item for CRUD, Takes model from LISTITEM and converts any items in 
+        //albums table to a List-Item so we can see more clearly the lists
+        //also found a way to display a list inside of a list by referencing the details
+        //of other songs that have been created. 
         public IEnumerable<AlbumListItem> GetAlbums()
         {
             using (var ctx = new ApplicationDbContext())
@@ -77,6 +85,7 @@ namespace Music.Services
                 return query.ToArray();
             }
         }
+        //This is the same as above, its it READ for CRUD by ID of album
         public AlbumDetail GetAlbumById(int id)
         {
             using (var ctx = new ApplicationDbContext())
@@ -100,6 +109,8 @@ namespace Music.Services
             }
 
         }
+        //CRUD Update for album, it takes the album id that is similar to the model id that
+        //you are putting in and updates the title
         public bool UpdateAlbum(AlbumEdit model)
         {
             using (var ctx = new ApplicationDbContext())
@@ -116,6 +127,9 @@ namespace Music.Services
             }
         }
 
+
+        //CRUD for delete album, takes id of album and deletes it based off the id that matches with the album
+        //ID that is already on the database. 
        
         public bool DeleteAlbum(int songId)
         {

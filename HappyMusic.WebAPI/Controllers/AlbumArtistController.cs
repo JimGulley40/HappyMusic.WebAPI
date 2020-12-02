@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace HappyMusic.WebAPI.Controllers
 {
+    [System.Web.Http.Authorize]
     public class AlbumArtistController : ApiController
     {
         /// <summary>
