@@ -12,6 +12,7 @@ namespace Music.Data
         public int ArtistId { get; set; }
         public int ProfileId { get; set; }
         public string ArtistName { get; set; }
+        public virtual Artist Artist { get; set; }
        
     }
 }

@@ -25,8 +25,8 @@ namespace HappyMusic.WebAPI.Controllers
 
         private ProfileService CreateProfileService()
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var profileService = new ProfileService(userId);
+            
+            var profileService = new ProfileService();
             return profileService;
         }
         /// <summary>

@@ -11,17 +11,17 @@ namespace Music.Services
 {
     public class ProfileService
     {
-        private readonly Guid _userId;
-        public ProfileService(Guid userId)
-        {
-            _userId = userId;
-        }
+        //private readonly Guid _userId;
+        //public ProfileService(Guid userId)
+        //{
+        //    _userId = userId;
+        //}
         public bool CreateProfile(ProfileCreate model)
         {
             var entity =
                 new Profile()
                 {
-
+                    
                     ProfileId = model.ProfileId,
                     UserName = model.UserName,
                     StartDate = model.StartDate,
@@ -68,21 +68,19 @@ namespace Music.Services
                                                 AlbumName = b.Album.Title,
                                                 ArtistName = b.Album.Artist.ArtistName
                                             }).ToList(),
-                                    Artists = 
+                                    FavoriteArtists = 
                                     e
-                                    .Artist
-                                    .Where(n => n.OwnerId == _userId)
+                                    .FavoriteArtist
+                                    //.Where(n => n.ProfileId == e.ProfileId)
                                     .Select(
                                         b =>
-                                        new ArtistDetail
+                                        new ArtistListItem
                                         {
-                                            ArtistName = b.ArtistName,
+                                            ArtistId = b.Artist.ArtistId,
+                                            ArtistName = b.Artist.ArtistName,
+                                            
+                                            
                                         }).ToList(),
-
-
-
-
-
                                 }
                         ) ;
 

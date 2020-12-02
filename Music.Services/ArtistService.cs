@@ -23,7 +23,7 @@ namespace Music.Services
                 {
                     //OwnerId = _userId,
                     ArtistName = model.ArtistName,
-                    CreatedUtc = DateTimeOffset.Now,
+                    //CreatedUtc = DateTimeOffset.Now,
                     //IsFavoriteArtist=model.IsFavoriteArtist
                 };
 
@@ -47,7 +47,7 @@ namespace Music.Services
                                 {
                                     ArtistId = e.ArtistId,
                                     ArtistName = e.ArtistName,
-                                    CreatedUtc = e.CreatedUtc,
+                                    //CreatedUtc = e.CreatedUtc,
                                     //IsFavoriteArtist = e.IsFavoriteArtist
                                 }
                         );
